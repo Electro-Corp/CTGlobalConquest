@@ -8,13 +8,16 @@ import javax.swing.*;
 import java.nio.file.Path;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-
+import java.awt.BasicStroke;
+import java.awt.Color;
 //import javax.swing.ImageIcon;
 import gd.rf.jsgames.tiles.Tile;
 
 public final class App {
     private App() {
     }
+
+    private final static int tileSize = 10;
 
     /**
      * @param args The arguments
@@ -38,11 +41,13 @@ public final class App {
                 Tile cTile = gb.board[height][width];
                 // System.out.println("Loaded tile at X: "+cTile.x + " Y: "+cTile.y);
 
-                JLabel currentTile = new JLabel(cTile.img());
-                currentTile.setBounds((int) cTile.x * 10, (int) cTile.y * 10, 100, 100);
+                JLabel currentTile = new JLabel(new ImageIcon(cTile.img()));
+                currentTile.setBounds((int) cTile.x * tileSize, (int) cTile.y * tileSize, tileSize, tileSize);
+                currentTile.setBorder(BorderFactory.createStrokeBorder(new BasicStroke(.5f)));
                 game.add(currentTile);
             }
         }
+        game.pack();
         System.out.println("Done.");
     }
 }

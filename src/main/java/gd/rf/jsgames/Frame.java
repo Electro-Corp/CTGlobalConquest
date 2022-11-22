@@ -1,6 +1,6 @@
 package gd.rf.jsgames;
 
-import javax.swing.JFrame;
+import javax.swing.*;
 import java.awt.Dimension;
 
 public class Frame extends JFrame {
@@ -27,6 +27,11 @@ public class Frame extends JFrame {
         this.setVisible(true);
 
         d = new Dimension(_d);
+    }
+
+    public void add(JLabel l) {
+        super.add(l);
+        // pack();
     }
 
     public void pack() {
