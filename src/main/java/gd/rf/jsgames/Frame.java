@@ -7,13 +7,15 @@ public class Frame extends JFrame {
     private Dimension d = new Dimension();
 
     public Frame(int _frameVert, int _frameHor, String _frameName) {
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setTitle(_frameName);
-        this.setSize(_frameHor, _frameVert);
-        this.setLocationRelativeTo(null);
-        this.setResizable(true);
+        this(new Dimension(_frameVert, _frameHor), _frameName);
 
-        d = new Dimension(_frameHor, _frameVert);
+        // this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // this.setTitle(_frameName);
+        // this.setSize(_frameHor, _frameVert);
+        // this.setLocationRelativeTo(null);
+        // this.setResizable(true);
+
+        // d = new Dimension(_frameHor, _frameVert);
     }
 
     public Frame(Dimension _d, String _frameName) {
@@ -22,6 +24,7 @@ public class Frame extends JFrame {
         this.setSize(_d);
         this.setLocationRelativeTo(null);
         this.setResizable(true);
+        this.setVisible(true);
 
         d = new Dimension(_d);
     }
