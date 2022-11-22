@@ -9,7 +9,7 @@ package gd.rf.jsgames.tiles;
 */
 
 public class Tile {
-    private float x, y;
+    public float x, y;
 
     public Tile(float x, float y) {
         this.x = x;
