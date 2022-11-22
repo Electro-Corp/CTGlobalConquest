@@ -39,7 +39,7 @@ public final class App {
                 // System.out.println("Loaded tile at X: "+cTile.x + " Y: "+cTile.y);
 
                 JLabel currentTile = new JLabel(cTile.img());
-                currentTile.setBounds((int) cTile.x, (int) cTile.y, 10, 10);
+                currentTile.setBounds((int) cTile.x * 10, (int) cTile.y * 10, 100, 100);
                 game.add(currentTile);
             }
         }
