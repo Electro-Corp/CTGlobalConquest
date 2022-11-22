@@ -1,20 +1,27 @@
-// package gd.rf.jsgames;
+package gd.rf.jsgames;
 
-// import static org.junit.Assert.assertTrue;
+import org.junit.Test;
+import static org.junit.Assert.assertTrue;
 
-// import org.junit.Test;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
-// /**
-//  * Unit test for simple App.
-//  */
-// public class AppTest 
-// {
-//     /**
-//      * Rigorous Test :-)
-//      */
-//     @Test
-//     public void shouldAnswerWithTrue()
-//     {
-//         assertTrue( true );
-//     }
-// }
+import org.junit.Test;
+
+/**
+ * Unit test for simple App.
+ */
+public class AppTest {
+    /**
+     * Rigorous Test :-)
+     */
+    @Test
+    public void shouldAnswerWithTrue() {
+        assertTrue(true);
+    }
+
+    @Test
+    public void grassExists() {
+        assertTrue(Files.exists(Paths.get("src/main/resources/tiles/grass.png")));
+    }
+}

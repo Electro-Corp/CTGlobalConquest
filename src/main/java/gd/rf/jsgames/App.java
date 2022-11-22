@@ -11,6 +11,7 @@ import java.nio.file.Paths;
 
 //import javax.swing.ImageIcon;
 import gd.rf.jsgames.tiles.Tile;
+
 public final class App {
     private App() {
     }
@@ -24,23 +25,23 @@ public final class App {
 
         // render
         Frame game = new Frame(480, 360, "Global Conquest I");
-        //game.add(gb);
+        // game.add(gb);
         game.setLayout(null);
         System.out.println("Loading, please wait.");
-      Path path = Paths.get("resources/tiles/grass.png");
+        Path path = Paths.get("src/main/resources/tiles/grass.png");
         if (Files.exists(path))
             System.out.println("Grass found!");
         else
-          System.out.println("Grass not found!");
-        for(int height = 0; height < x; height++){
-          for(int width = 0; width < y; width++){    
-            Tile cTile = gb.board[height][width];
-            //System.out.println("Loaded tile at X: "+cTile.x + " Y: "+cTile.y);
-            
-            JLabel currentTile = new JLabel(new ImageIcon("resources/tiles/grass.png"));
-            currentTile.setBounds((int)cTile.x,(int)cTile.y,1,10);
-            game.add(currentTile);
-          }
+            System.out.println("Grass not found!");
+        for (int height = 0; height < x; height++) {
+            for (int width = 0; width < y; width++) {
+                Tile cTile = gb.board[height][width];
+                // System.out.println("Loaded tile at X: "+cTile.x + " Y: "+cTile.y);
+
+                JLabel currentTile = new JLabel(cTile.img());
+                currentTile.setBounds((int) cTile.x, (int) cTile.y, 10, 10);
+                game.add(currentTile);
+            }
         }
         System.out.println("Done.");
     }
