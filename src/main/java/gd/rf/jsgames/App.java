@@ -1,3 +1,7 @@
+/*
+ * Main Class
+ */
+
 package gd.rf.jsgames;
 
 public final class App {
