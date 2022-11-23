@@ -2,7 +2,6 @@ package gd.rf.jsgames;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 import gd.rf.jsgames.tiles.*;
 
 public class Board {

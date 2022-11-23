@@ -5,10 +5,6 @@
 package gd.rf.jsgames;
 
 import javax.swing.*;
-import java.nio.file.Path;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.awt.BasicStroke;
 import java.awt.Color;
 //import javax.swing.ImageIcon;
 import gd.rf.jsgames.tiles.Tile;

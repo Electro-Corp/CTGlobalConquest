@@ -1,8 +1,5 @@
 package gd.rf.jsgames.tiles;
 
-import java.nio.file.Path;
-import java.nio.file.Paths;
-
 /*
   TILE TYPES:
     [0] GRASS
@@ -14,6 +11,7 @@ import java.nio.file.Paths;
 public class Tile {
     public float x, y;
 
+    // Defaults to grass icon
     public String icon = "src/main/resources/tiles/grass.png";
 
     public Tile(float x, float y) {
