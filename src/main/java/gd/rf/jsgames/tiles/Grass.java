@@ -9,6 +9,7 @@ public class Grass extends Tile {
 
     public Grass(float x, float y) {
         super(x, y);
-        super.setImg("src/main/resources/tiles/grass.png");
+        // this.setImg("src/main/resources/tiles/grass.png");
+        this.setImg("src/main/resources/units/settler.png");
     }
 }

@@ -12,7 +12,8 @@ import java.awt.BasicStroke;
 import java.awt.Color;
 //import javax.swing.ImageIcon;
 import gd.rf.jsgames.tiles.Tile;
-import gd.rf.jsgames.units.unit;
+import gd.rf.jsgames.units.Settler;
+
 public final class App {
     private App() {
     }
@@ -31,11 +32,11 @@ public final class App {
         // game.add(gb);
         game.setLayout(null);
         System.out.println("Loading, please wait.");
-        Path path = Paths.get("src/main/resources/tiles/grass.png");
-        if (Files.exists(path))
-            System.out.println("Grass found!");
-        else
-            System.out.println("Grass not found!");
+        // Path path = Paths.get("src/main/resources/tiles/grass.png");
+        // if (Files.exists(path))
+        // System.out.println("Grass found!");
+        // else
+        // System.out.println("Grass not found!");
         for (int height = 0; height < x; height++) {
             for (int width = 0; width < y; width++) {
                 Tile cTile = gb.board[height][width];
@@ -48,11 +49,12 @@ public final class App {
             }
         }
         // generate settler
-        unit set = new unit(0,0);
-        JLabel setTile = new JLabel(new ImageIcon(set.settlerImagePath));
+        Settler set = new Settler(0, 0);
+        JLabel setTile = new JLabel(new ImageIcon(set.iconPath));
         setTile.setBounds((int) set.x * tileSize, (int) set.y * tileSize, tileSize, tileSize);
         game.add(setTile);
         game.pack();
+
         System.out.println("Done.");
     }
 }
