@@ -12,7 +12,7 @@ import java.awt.BasicStroke;
 import java.awt.Color;
 //import javax.swing.ImageIcon;
 import gd.rf.jsgames.tiles.Tile;
-
+import gd.rf.jsgames.units.unit;
 public final class App {
     private App() {
     }
@@ -47,6 +47,11 @@ public final class App {
                 game.add(currentTile);
             }
         }
+        // generate settler
+        unit set = new unit(0,0);
+        JLabel setTile = new JLabel(new ImageIcon(set.settlerImagePath));
+        setTile.setBounds((int) set.x * tileSize, (int) set.y * tileSize, tileSize, tileSize);
+        game.add(setTile);
         game.pack();
         System.out.println("Done.");
     }
