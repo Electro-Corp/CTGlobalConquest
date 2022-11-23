@@ -14,7 +14,7 @@ import java.nio.file.Paths;
 public class Tile {
     public float x, y;
 
-    private Path img = Paths.get("src/main/resources/units/settler.png");
+    public String icon = "src/main/resources/tiles/grass.png";
 
     public Tile(float x, float y) {
         this.x = x;
@@ -22,14 +22,10 @@ public class Tile {
     }
 
     public String img() {
-        return img.toString();
-    }
-
-    public void setImg(Path _p) {
-        img = _p;
+        return icon;
     }
 
     public void setImg(String _p) {
-        img = Paths.get(_p);
+        icon = _p;
     }
 }
