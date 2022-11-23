@@ -5,5 +5,7 @@ public class Settler extends Unit {
         super(x, y);
         iconPath = "src/main/resources/units/settler.png";
     }
-
+    public void update(){
+      
+    }
 }
