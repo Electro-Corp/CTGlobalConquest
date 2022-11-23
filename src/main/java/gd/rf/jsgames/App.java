@@ -11,6 +11,7 @@ import java.awt.event.*;
 import gd.rf.jsgames.tiles.Tile;
 import gd.rf.jsgames.units.Settler;
 import gd.rf.jsgames.structures.City;
+import gd.rf.jsgames.ObjectManager;
 public final class App{
     private App() {
     }
@@ -25,7 +26,7 @@ public final class App{
     public static void main(String[] args) {
         int x = 16, y = 16;
         Board gb = new Board(x, y);
-
+        ObjectManager om = new ObjectManager(gb.board);
         // render
         Frame game = new Frame(460, 380, "Global Conquest I");
         game.setBackground(Color.gray);
@@ -62,8 +63,8 @@ public final class App{
             public void mouseClicked(MouseEvent e) {
               int x=e.getX();
               int y=e.getY();
-              System.out.println("Mouse clicked at: "+x+","+y);
-              
+              System.out.println("Mouse clicked at: "+x/tileSize+","+y/tileSize);
+              om.handleMouse(x/tileSize,y/tileSize);
             }
             @Override
             public void mousePressed(MouseEvent e){}
