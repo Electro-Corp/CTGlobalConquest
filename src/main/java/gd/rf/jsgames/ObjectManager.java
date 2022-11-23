@@ -27,9 +27,11 @@ public class ObjectManager{
   public JLabel[][] handleMouse(int x, int y){
     for(int height = 0; height < 16; height++){
       for(int width = 0; width < 16; width++){
-        if(gb.board[height][width].x == x && gb.board[height][width].y == y)
+        if(gb.board[height][width].x == x && gb.board[height][width].y == y){
           System.out.println(omBoard[height][width]);
           omBoard[height][width] = new JLabel(new ImageIcon("src/main/resources/tiles/grass_selected.png"));
+          break;
+        }
       }
     }
     return omBoard;
