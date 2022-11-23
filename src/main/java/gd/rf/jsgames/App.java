@@ -17,18 +17,19 @@ public final class App{
     }
 
     static JLayeredPane layers = new JLayeredPane();
-
+    public static int x = 16, y = 16;
+    private static Frame game;
     private final static int tileSize = 33;
-
+    public static ObjectManager om;
     /**
      * @param args The arguments
      */
     public static void main(String[] args) {
-        int x = 16, y = 16;
-        Board gb = new Board(x, y);
-        ObjectManager om = new ObjectManager(gb.board);
+        game = new Frame(460, 380, "Global Conquest I");
+        
+        om = new ObjectManager();
         // render
-        Frame game = new Frame(460, 380, "Global Conquest I");
+        
         game.setBackground(Color.gray);
         // game.add(gb);
         game.setLayout(null);
@@ -38,23 +39,14 @@ public final class App{
         // System.out.println("Grass found!");
         // else
         // System.out.println("Grass not found!");
-        for (int height = 0; height < x; height++) {
-            for (int width = 0; width < y; width++) {
-                Tile cTile = gb.board[height][width];
-                JLabel currentTile = gb.lBoard[height][width];
-                currentTile.setBounds((int) cTile.x * tileSize, (int) cTile.y * tileSize, tileSize, tileSize);
-                // currentTile.setBorder(BorderFactory.createStrokeBorder(new
-                // BasicStroke(.5f)));
-                layers.add(currentTile, 0);
-                // game.add(currentTile);
-            }
-        }
+        
         // Layer 0
         // generate settler
         Settler set = new Settler(0, 0);
         JLabel setTile = new JLabel(new ImageIcon(set.iconPath));
         setTile.setBounds((int) set.x * tileSize, (int) set.y * tileSize, tileSize, tileSize);
         layers.add(setTile, 1);
+        render();
         // game.add(setTile);
 
         game.setContentPane(layers);
@@ -64,7 +56,8 @@ public final class App{
               int x=e.getX();
               int y=e.getY();
               System.out.println("Mouse clicked at: "+x/tileSize+","+y/tileSize);
-              om.handleMouse(x/tileSize,y/tileSize);
+              om.gb.lBoard = om.handleMouse(x/tileSize,y/tileSize);
+              render();
             }
             @Override
             public void mousePressed(MouseEvent e){}
@@ -78,5 +71,20 @@ public final class App{
         game.pack();
 
         System.out.println("Done.");
+    }
+    public static void render(){
+      for (int height = 0; height < x; height++) {
+            for (int width = 0; width < y; width++) {
+                Tile cTile = om.gb.board[height][width];
+                JLabel currentTile = om.gb.lBoard[height][width];
+                currentTile.setBounds((int) cTile.x * tileSize, (int) cTile.y * tileSize, tileSize, tileSize);
+                // currentTile.setBorder(BorderFactory.createStrokeBorder(new
+                // BasicStroke(.5f)));
+                layers.add(currentTile, 0);
+                // game.add(currentTile);
+            }
+        }
+      game.setContentPane(layers);
+      game.pack();
     }
 }

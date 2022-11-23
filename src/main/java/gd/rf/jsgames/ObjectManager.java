@@ -3,12 +3,16 @@ import java.util.ArrayList;
 import gd.rf.jsgames.structures.City;
 import gd.rf.jsgames.units.Settler;
 import gd.rf.jsgames.tiles.Tile;
+import gd.rf.jsgames.Board;
+import javax.swing.*;
+
 public class ObjectManager{
   public ArrayList<Settler> settlers = new ArrayList<Settler>();
   public ArrayList<City> cities = new ArrayList<City>();
-  public Tile[][] omBoard;
-  public ObjectManager(Tile[][] omBoard){
-    this.omBoard = omBoard;
+  public JLabel[][] omBoard;
+  Board gb = new Board(16, 16);
+  public ObjectManager(){
+    this.omBoard = gb.lBoard;
   }
   public void updateObjects(){
     // update settlers
@@ -20,12 +24,14 @@ public class ObjectManager{
       this.cities.get(i).update();
     }
   }
-  public void handleMouse(int x, int y){
+  public JLabel[][] handleMouse(int x, int y){
     for(int height = 0; height < 16; height++){
       for(int width = 0; width < 16; width++){
-        if(omBoard[height][width].x == x && omBoard[height][width].y == y)
+        if(gb.board[height][width].x == x && gb.board[height][width].y == y)
           System.out.println(omBoard[height][width]);
+          omBoard[height][width] = new JLabel(new ImageIcon("src/main/resources/tiles/grass_selected.png"));
       }
     }
+    return omBoard;
   }
 }
