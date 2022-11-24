@@ -29,4 +29,14 @@
 // public void settlerExists() {
 // assertTrue(Files.exists(Paths.get("src/main/resources/units/settler.png")));
 // }
+
+// @Test
+// public void testDotExists() {
+// assertTrue(Files.exists(Paths.get("src/main/resources/test-dot.png")));
+// }
+
+// @Test
+// public void grassSelectedExists() {
+// assertTrue(Files.exists(Paths.get("src/main/resources/tiles/grass_selected.png")));
+// }
 // }

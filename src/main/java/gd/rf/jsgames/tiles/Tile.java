@@ -10,9 +10,13 @@ package gd.rf.jsgames.tiles;
 
 public class Tile {
     public float x, y;
+    // Default icon is grass
+    public String unSelectedPath = "src/main/resources/tiles/grass.png";
+    public String selectedPath = "src/main/resources/tiles/grass_selected.png";
 
     // Defaults to grass icon
-    public String icon = "src/main/resources/tiles/grass.png";
+    public String iconPath = "src/main/resources/tiles/grass.png";
+    public boolean selected = false;
 
     public Tile(float x, float y) {
         this.x = x;
@@ -20,10 +24,20 @@ public class Tile {
     }
 
     public String img() {
-        return icon;
+        return iconPath;
     }
 
     public void setImg(String _p) {
-        icon = _p;
+        iconPath = _p;
+    }
+
+    public void changeSelected() {
+        if (selected) {
+            selected = false;
+            iconPath = unSelectedPath;
+        } else {
+            selected = true;
+            iconPath = selectedPath;
+        }
     }
 }

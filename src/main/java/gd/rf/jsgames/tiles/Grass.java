@@ -5,6 +5,8 @@ public class Grass extends Tile {
 
     public Grass(float x, float y) {
         super(x, y);
-        icon = "src/main/resources/tiles/grass.png";
+        iconPath = "src/main/resources/tiles/grass.png";
+        unSelectedPath = "src/main/resources/tiles/grass.png";
+        selectedPath = "src/main/resources/tiles/grass_selected.png";
     }
 }
