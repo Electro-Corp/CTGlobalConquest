@@ -42,6 +42,9 @@ public class Unit {
     public void update(){
       if(isMoving){
         // do something
+        x += (toX - x) - ((toX - x) -1);
+        y += (toY - y) - ((toY - y) -1);
+        System.out.println(x+","+y);
       }
     }
 }

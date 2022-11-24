@@ -62,7 +62,7 @@ public final class App {
     // layers.add(setTile, 2);
      // 10 (reserved for UI layer(?))
     om.addSettler(3,4);
-    om.settlers.get(0).moveTo(5,7);
+    om.settlers.get(0).moveTo(16,16);
     render();
     // game.add(setTile);
     

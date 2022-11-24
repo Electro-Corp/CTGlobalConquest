@@ -23,6 +23,7 @@ public class ObjectManager {
     public void addSettler(float x, float y){
       this.settlers.add(new Settler(x,y));
     }
+    // next-turn 
     public void updateObjects() {
         // update settlers
         for (int i = 0; i < settlers.size(); i++) {
