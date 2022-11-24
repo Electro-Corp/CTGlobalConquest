@@ -50,6 +50,9 @@ public class Unit {
           y += (toY - y) - ((toY - y) -1);
         else
           y -= (toY - y) - ((toY - y) -1);
+
+        if(x == toX && y == toY)
+          isMoving = false;          
         System.out.println(x+","+y);
       }
     }

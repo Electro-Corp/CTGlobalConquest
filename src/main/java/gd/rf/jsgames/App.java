@@ -30,7 +30,7 @@ public final class App {
   static JLayeredPane layers = new JLayeredPane();
   public static int x = 16, y = 16;
   private static Frame game;
-  private static Frame ui;
+  private static Frame nextTurnWindow;
   private final static int tileSize = 33;
   public static ObjectManager om;
 
@@ -39,12 +39,13 @@ public final class App {
    */
   public static void main(String[] args) {
     game = new Frame(460, 380, "Global Conquest I");
-    ui = new Frame(100,400,"Stuff");
+    nextTurnWindow = new Frame(200,200,"Next Turn");
+    //ui.setLayout(null);
     game.setCursor(null);
     om = new ObjectManager();
     // render
-    JButton nextTurnButton = new JButton("Next turn..");  
-    ui.add(nextTurnButton);
+    JButton nextTurnButton = new JButton(new ImageIcon("src/main/resources/ui/nextturn.png"));  
+    nextTurnWindow.add(nextTurnButton);
     game.setBackground(Color.gray);
     game.setLayout(null);
     System.out.println("Loading, please wait.");
@@ -62,7 +63,7 @@ public final class App {
     // layers.add(setTile, 2);
      // 10 (reserved for UI layer(?))
     om.addSettler(5,7);
-    om.settlers.get(0).moveTo(3,4);
+    
     render();
     // game.add(setTile);
     
@@ -75,6 +76,7 @@ public final class App {
         om.gb.addPoint(x, y);
         // System.out.println("Mouse clicked at: " + x / tileSize + "," + y / tileSize);
         om.gb.lBoard = om.handleMouse(x / tileSize, y / tileSize);
+        om.settlers.get(0).moveTo(x / tileSize, y / tileSize);
         render();
         renderTestPoints();
       }
@@ -105,7 +107,7 @@ public final class App {
           render();
       }
     });
-    ui.pack();
+    nextTurnWindow.pack();
     System.out.println("Done.");
   }
   
