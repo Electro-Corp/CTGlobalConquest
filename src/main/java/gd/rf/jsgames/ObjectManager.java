@@ -2,13 +2,14 @@ package gd.rf.jsgames;
 
 import java.util.ArrayList;
 import gd.rf.jsgames.structures.City;
-import gd.rf.jsgames.units.Settler;
+import gd.rf.jsgames.units.*;
 import gd.rf.jsgames.tiles.Tile;
 import gd.rf.jsgames.Board;
 import javax.swing.*;
 
 public class ObjectManager {
     public ArrayList<Settler> settlers = new ArrayList<Settler>();
+    public ArrayList<Warrior> warriors = new ArrayList<Warrior>();
     public ArrayList<City> cities = new ArrayList<City>();
     public JLabel[][] omLBoard;
     public Tile[][] omBoard;
@@ -19,10 +20,17 @@ public class ObjectManager {
         this.omBoard = gb.board;
     }
 
+    public void addSettler(float x, float y){
+      this.settlers.add(new Settler(x,y));
+    }
     public void updateObjects() {
         // update settlers
         for (int i = 0; i < settlers.size(); i++) {
             this.settlers.get(i).update();
+        }
+        // update warriors
+        for (int i = 0; i < warriors.size(); i++) {
+            this.warriors.get(i).update();
         }
         // update cites
         for (int i = 0; i < cities.size(); i++) {

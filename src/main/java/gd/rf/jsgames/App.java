@@ -30,6 +30,7 @@ public final class App {
   static JLayeredPane layers = new JLayeredPane();
   public static int x = 16, y = 16;
   private static Frame game;
+  private static Frame ui;
   private final static int tileSize = 33;
   public static ObjectManager om;
 
@@ -38,10 +39,12 @@ public final class App {
    */
   public static void main(String[] args) {
     game = new Frame(460, 380, "Global Conquest I");
+    ui = new Frame(100,400,"Stuff");
     game.setCursor(null);
     om = new ObjectManager();
     // render
-
+    JButton nextTurnButton = new JButton("Next turn..");  
+    ui.add(nextTurnButton);
     game.setBackground(Color.gray);
     game.setLayout(null);
     System.out.println("Loading, please wait.");
@@ -53,13 +56,16 @@ public final class App {
 
     // Layer 0
     // generate settler
-    Settler set = new Settler(0, 0);
-    JLabel setTile = new JLabel(new ImageIcon(set.iconPath));
-    setTile.setBounds((int) set.x * tileSize, (int) set.y * tileSize, tileSize, tileSize);
-    layers.add(setTile, 2);
+    // Settler set = new Settler(0, 0);
+    // JLabel setTile = new JLabel(new ImageIcon(set.iconPath));
+    // setTile.setBounds((int) set.x * tileSize, (int) set.y * tileSize, tileSize, tileSize);
+    // layers.add(setTile, 2);
+     // 10 (reserved for UI layer(?))
+    om.addSettler(3,4);
+    om.settlers.get(0).moveTo(5,7);
     render();
     // game.add(setTile);
-
+    
     game.setContentPane(layers);
     game.addMouseListener(new MouseListener() {
       @Override
@@ -72,7 +78,7 @@ public final class App {
         render();
         renderTestPoints();
       }
-
+      
       @Override
       public void mousePressed(MouseEvent e) {
       }
@@ -90,22 +96,40 @@ public final class App {
       }
     });
     game.pack();
+    nextTurnButton.addActionListener(new ActionListener() {
 
+      @Override
+      public void actionPerformed(ActionEvent e) {
+          System.out.println("Next turn..");
+          om.updateObjects();
+          render();
+      }
+    });
+    ui.pack();
     System.out.println("Done.");
   }
-
+  
   public static void render() {
-    layers.remove(0);
+    try{
+      layers.remove(0);
+    }catch(Exception d){ // incase the layer does not exist
+      
+    }
     for (int height = 0; height < x; height++) {
       for (int width = 0; width < y; width++) {
         Tile cTile = om.gb.board[height][width];
         JLabel currentTile = om.gb.lBoard[height][width];
         currentTile.setBounds((int) cTile.x * tileSize, (int) cTile.y * tileSize, tileSize, tileSize);
-
         layers.add(currentTile, 0);
       }
     }
-
+    // render all units / cities
+    for(int i = 0; i < om.settlers.size(); i++){
+        Settler cTile = om.settlers.get(i);
+        JLabel currentTile = new JLabel(new ImageIcon(om.settlers.get(i).iconPath));
+        currentTile.setBounds((int) cTile.x * tileSize, (int) cTile.y * tileSize, tileSize, tileSize);
+        layers.add(currentTile, 2);
+    }
     game.setContentPane(layers);
     game.pack();
   }
