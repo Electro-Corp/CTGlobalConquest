@@ -61,8 +61,8 @@ public final class App {
     // setTile.setBounds((int) set.x * tileSize, (int) set.y * tileSize, tileSize, tileSize);
     // layers.add(setTile, 2);
      // 10 (reserved for UI layer(?))
-    om.addSettler(3,4);
-    om.settlers.get(0).moveTo(16,16);
+    om.addSettler(5,7);
+    om.settlers.get(0).moveTo(3,4);
     render();
     // game.add(setTile);
     
