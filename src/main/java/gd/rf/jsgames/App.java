@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 
-public class MainApp extends Application {
+public class App extends Application {
     private static Stage stage;
 
     @Override
@@ -30,7 +30,7 @@ public class MainApp extends Application {
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApp.class.getResource("/fxml/"+fxml + ".fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/fxml/"+fxml + ".fxml"));
         return fxmlLoader.load();
     }
 
