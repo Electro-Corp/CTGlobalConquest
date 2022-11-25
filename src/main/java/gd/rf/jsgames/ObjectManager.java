@@ -17,6 +17,7 @@ public class ObjectManager {
     public Unit selectedUnit;
     public boolean unitMove = false;
     public int mX, mY;
+    public ArrayList<String> log = new ArrayList<String>();
     public ObjectManager() {
         this.omLBoard = gb.lBoard;
         this.omBoard = gb.board;

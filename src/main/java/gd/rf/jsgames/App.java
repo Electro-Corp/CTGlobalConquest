@@ -32,6 +32,7 @@ public final class App {
   private static Frame game;
   private static Frame nextTurnWindow;
   private static Frame unitWindow;
+  private static Frame gameLog;
   private final static int tileSize = 33;
   public static ObjectManager om;
   
@@ -42,6 +43,7 @@ public final class App {
     game = new Frame(460, 380, "Global Conquest I");
     nextTurnWindow = new Frame(200,200,"Next Turn");
     unitWindow = new Frame(500,100, "Unit window");
+    gameLog = new Frame(300,400, "Game log");
     unitWindow.setLayout(null);
     //ui.setLayout(null);
     game.setCursor(null);
@@ -57,6 +59,7 @@ public final class App {
     nextTurnWindow.add(nextTurnButton);
     game.setBackground(Color.gray);
     game.setLayout(null);
+    log("New game started..");
     System.out.println("Loading, please wait.");
     // Path path = Paths.get("src/main/resources/tiles/grass.png");
     // if (Files.exists(path))
@@ -124,7 +127,6 @@ public final class App {
       public void actionPerformed(ActionEvent e) {
           if(om.selectedUnit != null){
             om.selectedUnit.action(om);
-            render();
           }
       }
     });
@@ -136,9 +138,13 @@ public final class App {
             om.unitMove = false;
             om.selectedUnit.moveTo(om.mX,om.mY);
             om.selectedUnit = null;
+            unitMove.setText("Unit MoveTo");
           }
           if(om.selectedUnit != null){
             om.unitMove = true;
+            unitMove.setText("Select location");
+          }else{
+            log("Select unit..");
           }
       }
     });
@@ -186,5 +192,9 @@ public final class App {
       game.setContentPane(layers);
       game.pack();
     }
+  }
+  public static void log(String message){
+    om.log.add(message);
+    gameLog.add(new JList(om.log.toArray()));
   }
 }
