@@ -34,7 +34,7 @@ public final class App {
   private static Frame unitWindow;
   private final static int tileSize = 33;
   public static ObjectManager om;
-
+  
   /**
    * @param args The arguments
    */
@@ -51,6 +51,9 @@ public final class App {
     JButton unitAction = new JButton("Unit Action");
     unitAction.setBounds(10,10,140,60);
     unitWindow.add(unitAction);
+    JButton unitMove = new JButton("Unit MoveTo");
+    unitMove.setBounds(200,10,140,60);
+    unitWindow.add(unitMove);
     nextTurnWindow.add(nextTurnButton);
     game.setBackground(Color.gray);
     game.setLayout(null);
@@ -81,8 +84,10 @@ public final class App {
         int y = e.getY() - 32;
         om.gb.addPoint(x, y);
         // System.out.println("Mouse clicked at: " + x / tileSize + "," + y / tileSize);
+        om.mX = x / tileSize;
+        om.mY = y / tileSize;
         om.gb.lBoard = om.handleMouse(x / tileSize, y / tileSize);
-        om.settlers.get(0).moveTo(x / tileSize, y / tileSize);
+        //om.settlers.get(0).moveTo(x / tileSize, y / tileSize);
         render();
         renderTestPoints();
       }
@@ -111,6 +116,20 @@ public final class App {
           System.out.println("Next turn..");
           om.updateObjects();
           render();
+      }
+    });
+    unitMove.addActionListener(new ActionListener() {
+
+      @Override
+      public void actionPerformed(ActionEvent e) {
+          if(om.unitMove){
+            om.unitMove = false;
+            om.selectedUnit.moveTo(om.mX,om.mY);
+            om.selectedUnit = null;
+          }
+          if(om.selectedUnit != null){
+            om.unitMove = true;
+          }
       }
     });
     nextTurnWindow.pack();

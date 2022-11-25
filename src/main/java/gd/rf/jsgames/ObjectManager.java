@@ -14,7 +14,9 @@ public class ObjectManager {
     public JLabel[][] omLBoard;
     public Tile[][] omBoard;
     Board gb = new Board(16, 16);
-
+    public Unit selectedUnit;
+    public boolean unitMove = false;
+    public int mX, mY;
     public ObjectManager() {
         this.omLBoard = gb.lBoard;
         this.omBoard = gb.board;
@@ -69,6 +71,15 @@ public class ObjectManager {
         } else {
             omBoard[y][x].changeSelected();
             updateLables();
+        }
+        if(!unitMove){
+          selectedUnit = null;
+        }
+        for (int i = 0; i < settlers.size(); i++) {
+           if(this.settlers.get(i).x == x && this.settlers.get(i).y == y){
+             selectedUnit = settlers.get(i);
+             break;
+           }
         }
         return omLBoard;
     }
