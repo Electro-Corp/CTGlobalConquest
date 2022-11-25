@@ -31,6 +31,7 @@ public final class App {
   public static int x = 16, y = 16;
   private static Frame game;
   private static Frame nextTurnWindow;
+  private static Frame unitWindow;
   private final static int tileSize = 33;
   public static ObjectManager om;
 
@@ -40,11 +41,16 @@ public final class App {
   public static void main(String[] args) {
     game = new Frame(460, 380, "Global Conquest I");
     nextTurnWindow = new Frame(200,200,"Next Turn");
+    unitWindow = new Frame(500,100, "Unit window");
+    unitWindow.setLayout(null);
     //ui.setLayout(null);
     game.setCursor(null);
     om = new ObjectManager();
     // render
     JButton nextTurnButton = new JButton(new ImageIcon("src/main/resources/ui/nextturn.png"));  
+    JButton unitAction = new JButton("Unit Action");
+    unitAction.setBounds(10,10,140,60);
+    unitWindow.add(unitAction);
     nextTurnWindow.add(nextTurnButton);
     game.setBackground(Color.gray);
     game.setLayout(null);

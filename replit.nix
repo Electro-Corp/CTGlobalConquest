@@ -1,5 +1,6 @@
 { pkgs }: {
     deps = [
+        pkgs.xterm
         pkgs.tree
         pkgs.graalvm17-ce
         pkgs.maven
