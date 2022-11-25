@@ -6,7 +6,7 @@ public class City{
   int level;
   boolean inProduction;
   // base level image
-  public String img = "src/main/resources/structures/city.png";
+  public String iconPath = "src/main/resources/structures/city.png";
   public City(float x, float y){
     this.x = x;
     this.y = y;

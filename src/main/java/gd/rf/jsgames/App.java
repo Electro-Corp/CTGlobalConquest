@@ -118,6 +118,16 @@ public final class App {
           render();
       }
     });
+    unitAction.addActionListener(new ActionListener() {
+
+      @Override
+      public void actionPerformed(ActionEvent e) {
+          if(om.selectedUnit != null){
+            om.selectedUnit.action(om);
+            render();
+          }
+      }
+    });
     unitMove.addActionListener(new ActionListener() {
 
       @Override
@@ -156,6 +166,12 @@ public final class App {
         JLabel currentTile = new JLabel(new ImageIcon(om.settlers.get(i).iconPath));
         currentTile.setBounds((int) cTile.x * tileSize, (int) cTile.y * tileSize, tileSize, tileSize);
         layers.add(currentTile, 2);
+    }
+    for(int i = 0; i < om.cities.size(); i++){
+        City cTile = om.cities.get(i);
+        JLabel currentTile = new JLabel(new ImageIcon(om.cities.get(i).iconPath));
+        currentTile.setBounds((int) cTile.x * tileSize, (int) cTile.y * tileSize, tileSize, tileSize);
+        layers.add(currentTile, 3);
     }
     game.setContentPane(layers);
     game.pack();

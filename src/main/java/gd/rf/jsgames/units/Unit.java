@@ -1,6 +1,7 @@
 package gd.rf.jsgames.units;
 
 import gd.rf.jsgames.tiles.Tile;
+import gd.rf.jsgames.ObjectManager;
 
 public class Unit {
     public float x, y;
@@ -58,5 +59,8 @@ public class Unit {
           System.out.println(x+","+y);
         }
       }
+    }
+    public void action(ObjectManager om){
+      System.out.println("Unit has not been configured correctly, there is no override for action!");
     }
 }
