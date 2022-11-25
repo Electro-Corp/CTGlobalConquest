@@ -6,6 +6,8 @@ import gd.rf.jsgames.units.*;
 import gd.rf.jsgames.tiles.Tile;
 import gd.rf.jsgames.Board;
 import javax.swing.*;
+import javax.swing.DefaultListModel;
+import javax.swing.JList;
 
 public class ObjectManager {
     public ArrayList<Settler> settlers = new ArrayList<Settler>();
@@ -17,7 +19,8 @@ public class ObjectManager {
     public Unit selectedUnit;
     public boolean unitMove = false;
     public int mX, mY;
-    public ArrayList<String> log = new ArrayList<String>();
+    public final JList<String> listDisplay = new JList<>();
+    public DefaultListModel<String> log = new DefaultListModel<>();
     public ObjectManager() {
         this.omLBoard = gb.lBoard;
         this.omBoard = gb.board;

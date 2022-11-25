@@ -33,6 +33,7 @@ public final class App {
   private static Frame nextTurnWindow;
   private static Frame unitWindow;
   private static Frame gameLog;
+  
   private final static int tileSize = 33;
   public static ObjectManager om;
   
@@ -117,6 +118,7 @@ public final class App {
       @Override
       public void actionPerformed(ActionEvent e) {
           System.out.println("Next turn..");
+          log("Next turn..");
           om.updateObjects();
           render();
       }
@@ -127,6 +129,9 @@ public final class App {
       public void actionPerformed(ActionEvent e) {
           if(om.selectedUnit != null){
             om.selectedUnit.action(om);
+            render();
+          }else{
+            log("No unit selected!");
           }
       }
     });
@@ -143,13 +148,15 @@ public final class App {
           if(om.selectedUnit != null){
             om.unitMove = true;
             unitMove.setText("Select location");
-          }else{
-            log("Select unit..");
+            log("Select location to move to and then click again.");
+          }else if(!om.unitMove){
+            log("No unit selected!");
           }
       }
     });
     nextTurnWindow.pack();
     System.out.println("Done.");
+    log("Loading finished!");
   }
   
   public static void render() {
@@ -194,7 +201,9 @@ public final class App {
     }
   }
   public static void log(String message){
-    om.log.add(message);
-    gameLog.add(new JList(om.log.toArray()));
+    om.log.addElement(message);
+    System.out.println(message);
+    om.listDisplay.setModel(om.log);
+    gameLog.add(om.listDisplay);
   }
 }
