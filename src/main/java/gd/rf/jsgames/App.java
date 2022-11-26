@@ -144,12 +144,13 @@ public final class App {
             om.selectedUnit.moveTo(om.mX,om.mY);
             om.selectedUnit = null;
             unitMove.setText("Unit MoveTo");
+            log("Location selected. Will move next turn.");
           }
-          if(om.selectedUnit != null){
+          else if(om.selectedUnit != null){
             om.unitMove = true;
             unitMove.setText("Select location");
             log("Select location to move to and then click again.");
-          }else if(!om.unitMove){
+          }else{
             log("No unit selected!");
           }
       }
