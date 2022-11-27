@@ -12,6 +12,8 @@ public class Settler extends Unit {
       City tmp = new City(this.x, this.y);
       om.cities.add(tmp);
       this.iconPath = "";
+      this.x = -1;
+      this.y = -1;
     }
     // public void update(){
       

@@ -227,12 +227,10 @@ public final class App {
       game.pack();
     }
   }
-
   public static void log(String message) {
     om.log.addElement(message);
     System.out.println(message);
     om.listDisplay.setModel(om.log);
     gameLog.add(om.listDisplay);
   }
-
 }

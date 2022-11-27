@@ -14,6 +14,8 @@ public class Builder extends Unit {
     Farm tmp = new Farm(this.x, this.y);
     om.farms.add(tmp);
     this.iconPath = "";
+    this.x = -1;
+    this.y = -1;
   }
   // public void update(){
 
