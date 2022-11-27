@@ -3,26 +3,26 @@ package gd.rf.jsgames;
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.app.GameSettings;
 import com.almasb.fxgl.dsl.EntityBuilder;
-import com.almasb.fxgl.dsl.FXGL;
 import com.almasb.fxgl.entity.Entity;
-import com.almasb.fxgl.entity.components.IrremovableComponent;
+import com.almasb.fxgl.entity.GameWorld;
 import com.almasb.fxgl.input.Input;
 import com.almasb.fxgl.input.UserAction;
-import com.almasb.fxgl.texture.Texture;
 
 import gd.rf.jsgames.tiles.Grass;
 import gd.rf.jsgames.tiles.Tile;
-import javafx.application.Platform;
-import javafx.beans.property.ReadOnlyStringWrapper;
-import javafx.scene.Group;
-import javafx.scene.Node;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.scene.control.TextInputDialog;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
+import javafx.scene.input.MouseButton;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.CycleMethod;
-import javafx.scene.paint.LinearGradient;
-import javafx.scene.paint.Stop;
+import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Text;
+import javafx.stage.Stage;
+import javafx.util.Duration;
+import static com.almasb.fxgl.dsl.FXGL.*;
+import java.util.*;
 
 import java.util.Map;
 
@@ -37,6 +37,7 @@ public class App extends GameApplication {
     private final int TILE_COUNT_X = 16;
     private final int TILE_COUNT_Y = 16;
     private final Tile[][] tiles = new Tile[TILE_COUNT_X][TILE_COUNT_Y];
+    private GameWorld gw;
 
     @Override
     protected void initSettings(GameSettings settings) {
@@ -46,10 +47,29 @@ public class App extends GameApplication {
     }
 
     protected void initGame() {
-        createBoard();
+        gw = getGameWorld();
+        getGameScene().setBackgroundColor(Color.BLACK);
+
+        // createBoard();
         for (int i = 0; i < TILE_COUNT_Y; i++) {
             for (int j = 0; j < TILE_COUNT_X; j++) {
                 tiles[j][i] = new Grass(j, i);
+            }
+        }
+    }
+
+    protected void initUI() {
+        for (int i = 0; i < TILE_COUNT_Y; i++) {
+            for (int j = 0; j < TILE_COUNT_X; j++) {
+                gw.addEntity(tiles[j][i].toEntity());
+            }
+        }
+    }
+
+    protected void renderGame() {
+        for (int i = 0; i < TILE_COUNT_Y; i++) {
+            for (int j = 0; j < TILE_COUNT_X; j++) {
+                tiles[j][i].toEntity();
             }
         }
     }
