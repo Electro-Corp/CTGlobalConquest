@@ -31,8 +31,8 @@ public class Tile {
     public final double size;
 
     // Default icon is grass
-    public String unSelectedPath = "src/main/resources/images/tiles/grass.png";
-    public String selectedPath = "src/main/resources/images/tiles/grass_selected.png";
+    public String unSelectedPath = "tiles/grass.png";
+    public String selectedPath = "tiles/grass_selected.png";
     public String path = selectedPath;
     // Defaults to grass icon
     public Node node = FXGL.getAssetLoader().loadTexture(path);

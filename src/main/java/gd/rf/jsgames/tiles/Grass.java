@@ -8,8 +8,8 @@ public class Grass extends Tile {
     public Grass(double x, double y) {
         super(x, y);
 
-        setImg("src/main/resources/images/tiles/grass.png");
-        unSelectedPath = "src/main/resources/images/tiles/grass.png";
-        selectedPath = "src/main/resources/images/tiles/grass_selected.png";
+        setImg("tiles/grass.png");
+        unSelectedPath = "tiles/grass.png";
+        selectedPath = "tiles/grass_selected.png";
     }
 }
