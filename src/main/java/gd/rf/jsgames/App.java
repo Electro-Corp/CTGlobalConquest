@@ -71,6 +71,7 @@ public class App extends GameApplication {
     }
 
     protected void renderGame() {
+        System.out.println("RENDER CALLED!!!");
         for (int i = 0; i < TILE_COUNT_Y; i++) {
             for (int j = 0; j < TILE_COUNT_X; j++) {
                 tiles[j][i].toEntity();
@@ -99,11 +100,11 @@ public class App extends GameApplication {
                 double dx = input.getMouseXWorld();
                 try {
                     tiles[(int)dx/Constants.TILE_SIZE][(int)dy/Constants.TILE_SIZE].changeSelected();
-                    System.out.println("X: "+(int)dx/Constants.TILE_SIZE+" Y: "+(int)dy/Constants.TILE_SIZE+" STATE: "+tiles[(int)dx/Constants.TILE_SIZE][(int)dy/Constants.TILE_SIZE].selected);
+                    System.out.println("X: "+(int)dx/Constants.TILE_SIZE+" Y: "+(int)dy/Constants.TILE_SIZE+" STATE: "+tiles[(int)dx/Constants.TILE_SIZE][(int)dy/Constants.TILE_SIZE].selected + " "+tiles[(int)dx/Constants.TILE_SIZE][(int)dy/Constants.TILE_SIZE].path);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
-                renderGame();
+                initUI();
             }
         }, MouseButton.PRIMARY);
     }
