@@ -85,6 +85,18 @@ public class App extends GameApplication {
     // return new Grass(x, y);
     // }
 
+    protected void initInput() {
+        Input input = getInput();
+
+        input.addAction(new UserAction("Mouse Movement") {
+            @Override
+            protected void onAction() {
+                double dy = input.getMouseYWorld();
+                double dx = input.getMouseXWorld();
+            }
+        }, MouseButton.PRIMARY);
+    }
+
     public static void main(String[] args) {
         launch(args);
     }
