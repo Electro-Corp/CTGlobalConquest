@@ -4,8 +4,8 @@ import java.io.FileNotFoundException;
 
 public class Grass extends Tile {
     // Already has x and y
-    
-    public Grass(float x, float y) throws FileNotFoundException {
+
+    public Grass(double x, double y) {
         super(x, y);
 
         setImg("src/main/resources/images/tiles/grass.png");
