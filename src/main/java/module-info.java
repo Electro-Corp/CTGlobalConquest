@@ -4,7 +4,6 @@ module gd.rf.jsgames {
     requires javafx.media;
 
     opens gd.rf.jsgames to javafx.fxml;
-    opens assets.textures;
 
     exports gd.rf.jsgames;
 
