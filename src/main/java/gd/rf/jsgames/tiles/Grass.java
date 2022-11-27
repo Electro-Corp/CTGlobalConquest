@@ -1,6 +1,5 @@
 package gd.rf.jsgames.tiles;
 
-import java.io.FileNotFoundException;
 
 public class Grass extends Tile {
     // Already has x and y

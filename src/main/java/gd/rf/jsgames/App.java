@@ -10,6 +10,7 @@ import com.almasb.fxgl.input.UserAction;
 
 import gd.rf.jsgames.tiles.Grass;
 import gd.rf.jsgames.tiles.Tile;
+import gd.rf.jsgames.units.Settler;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.scene.control.TextInputDialog;
@@ -38,7 +39,7 @@ public class App extends GameApplication {
     private final int TILE_COUNT_Y = 16;
     private final Tile[][] tiles = new Tile[TILE_COUNT_X][TILE_COUNT_Y];
     private GameWorld gw;
-
+    private ObjectManager om;
     @Override
     protected void initSettings(GameSettings settings) {
         settings.setWidth(800);
@@ -48,8 +49,9 @@ public class App extends GameApplication {
 
     protected void initGame() {
         gw = getGameWorld();
+        om = new ObjectManager();
         getGameScene().setBackgroundColor(Color.BLACK);
-
+        om.units.add(new Settler(0,3));
         // createBoard();
         for (int i = 0; i < TILE_COUNT_Y; i++) {
             for (int j = 0; j < TILE_COUNT_X; j++) {
@@ -93,6 +95,7 @@ public class App extends GameApplication {
             protected void onAction() {
                 double dy = input.getMouseYWorld();
                 double dx = input.getMouseXWorld();
+                tiles[(int)dx/Constants.TILE_SIZE][(int)dy/Constants.TILE_SIZE].selected = true;
             }
         }, MouseButton.PRIMARY);
     }
