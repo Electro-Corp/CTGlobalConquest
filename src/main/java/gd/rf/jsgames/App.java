@@ -23,6 +23,8 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import static com.almasb.fxgl.dsl.FXGL.*;
+
+import java.io.FileNotFoundException;
 import java.util.*;
 
 import java.util.Map;
@@ -95,7 +97,12 @@ public class App extends GameApplication {
             protected void onAction() {
                 double dy = input.getMouseYWorld();
                 double dx = input.getMouseXWorld();
-                tiles[(int)dx/Constants.TILE_SIZE][(int)dy/Constants.TILE_SIZE].selected = true;
+                try {
+                    tiles[(int)dx/Constants.TILE_SIZE][(int)dy/Constants.TILE_SIZE].changeSelected();
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+                this.renderGame();
             }
         }, MouseButton.PRIMARY);
     }
