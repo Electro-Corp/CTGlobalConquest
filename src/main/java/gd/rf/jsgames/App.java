@@ -102,7 +102,7 @@ public class App extends GameApplication {
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
-                this.renderGame();
+                renderGame();
             }
         }, MouseButton.PRIMARY);
     }
