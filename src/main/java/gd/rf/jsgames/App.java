@@ -99,6 +99,7 @@ public class App extends GameApplication {
                 double dx = input.getMouseXWorld();
                 try {
                     tiles[(int)dx/Constants.TILE_SIZE][(int)dy/Constants.TILE_SIZE].changeSelected();
+                    System.out.println("X: "+(int)dx/Constants.TILE_SIZE+" Y: "+(int)dy/Constants.TILE_SIZE+" STATE: "+tiles[(int)dx/Constants.TILE_SIZE][(int)dy/Constants.TILE_SIZE].selected);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
