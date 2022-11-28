@@ -3,6 +3,7 @@ package gd.rf.jsgames;
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.app.GameSettings;
 import com.almasb.fxgl.dsl.EntityBuilder;
+import com.almasb.fxgl.dsl.FXGL;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.GameWorld;
 import com.almasb.fxgl.input.Input;
@@ -41,6 +42,8 @@ public class App extends GameApplication {
     private static final int TOTAL_HEIGHT = 2 * BOARD_Y + BOARD_SIZE;
     private final int TILE_COUNT_X = 16;
     private final int TILE_COUNT_Y = 16;
+    private int TILE_OFFSET_X = 0;
+    private int TILE_OFFSET_Y = 0;
     private final Point MOUSE_OFFSET = AppSettings.MOUSE_OFFSET;
     private final Tile[][] tiles = new Tile[TILE_COUNT_X][TILE_COUNT_Y];
     private final int BORDER_WIDTH = AppSettings.BORDER_WIDTH;
@@ -112,8 +115,7 @@ public class App extends GameApplication {
             protected void onActionBegin() {
                 
                 int dy = (int)(input.getMouseYWorld() + MOUSE_OFFSET.y) / (TILE_SIZE + BORDER_WIDTH);
-                int dx = (int)(input.getMouseXWorld() + MOUSE_OFFSET.x) / (TILE_SIZE
-                + BORDER_WIDTH);
+                int dx = (int)(input.getMouseXWorld() + MOUSE_OFFSET.x) / (TILE_SIZE + BORDER_WIDTH);
                 try {
                     tiles[(int) dx ][(int) dy ].changeSelected();
                     if(tiles[dx][dy].unitOn != null){
@@ -126,7 +128,12 @@ public class App extends GameApplication {
                 initUI();
             }
         };
-
+        FXGL.getInput().addAction(new UserAction("Move Left") {
+            @Override
+            protected void onAction() { 
+            
+            }
+        }, KeyCode.A);
         input.addAction(LeftClick, MouseButton.PRIMARY);
     }
 
