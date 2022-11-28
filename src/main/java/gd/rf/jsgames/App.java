@@ -39,13 +39,13 @@ public class App extends GameApplication {
     private static final int BOARD_SIZE = 2 * BOARD_THICK + 4 * TILE_SIZE;
     private static final int TOTAL_WIDTH = 2 * BOARD_X + BOARD_SIZE + 160;
     private static final int TOTAL_HEIGHT = 2 * BOARD_Y + BOARD_SIZE;
-    private final int TILE_COUNT_X = 16;
-    private final int TILE_COUNT_Y = 16;
-    private final Point MOUSE_OFFSET = AppSettings.MOUSE_OFFSET;
-    private final Tile[][] tiles = new Tile[TILE_COUNT_X][TILE_COUNT_Y];
-    private final int BORDER_WIDTH = AppSettings.BORDER_WIDTH;
-    private GameWorld gw;
-    private ObjectManager om;
+    private static final int TILE_COUNT_X = 16;
+    private static final int TILE_COUNT_Y = 16;
+    private static final Point MOUSE_OFFSET = AppSettings.MOUSE_OFFSET;
+    private static final Tile[][] tiles = new Tile[TILE_COUNT_X][TILE_COUNT_Y];
+    private static final int BORDER_WIDTH = AppSettings.BORDER_WIDTH;
+    private static GameWorld gw;
+    private static ObjectManager om;
 
     @Override
     protected void initSettings(GameSettings settings) {
@@ -101,7 +101,7 @@ public class App extends GameApplication {
     // private Entity createGrass(int x, int y) {
     // return new Grass(x, y);
     // }
-    private void nextTurn(){
+    private static void nextTurn(){
         om.updateObjects(tiles);
     }
     protected void initInput() {
@@ -131,8 +131,8 @@ public class App extends GameApplication {
     }
 
 
-    public void update() {
-        
+    public static void update() {
+        nextTurn();
     }
     public static void main(String[] args) {
         launch(args);
