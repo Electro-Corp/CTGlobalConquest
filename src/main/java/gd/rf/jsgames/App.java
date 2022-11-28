@@ -42,6 +42,7 @@ public class App extends GameApplication {
     private final Tile[][] tiles = new Tile[TILE_COUNT_X][TILE_COUNT_Y];
     private GameWorld gw;
     private ObjectManager om;
+
     @Override
     protected void initSettings(GameSettings settings) {
         settings.setWidth(800);
@@ -53,7 +54,7 @@ public class App extends GameApplication {
         gw = getGameWorld();
         om = new ObjectManager();
         getGameScene().setBackgroundColor(Color.BLACK);
-        om.units.add(new Settler(0,3));
+        om.units.add(new Settler(0, 3));
         // createBoard();
         for (int i = 0; i < TILE_COUNT_Y; i++) {
             for (int j = 0; j < TILE_COUNT_X; j++) {
@@ -93,20 +94,25 @@ public class App extends GameApplication {
     protected void initInput() {
         Input input = getInput();
 
-        input.addAction(new UserAction("Mouse Movement") {
+        UserAction LeftClick = new UserAction("LeftClick") {
             @Override
-            protected void onAction() {
+            protected void onActionBegin() {
                 double dy = input.getMouseYWorld();
                 double dx = input.getMouseXWorld();
                 try {
-                    tiles[(int)dx/Constants.TILE_SIZE][(int)dy/Constants.TILE_SIZE].changeSelected();
-                    System.out.println("X: "+(int)dx/Constants.TILE_SIZE+" Y: "+(int)dy/Constants.TILE_SIZE+" STATE: "+tiles[(int)dx/Constants.TILE_SIZE][(int)dy/Constants.TILE_SIZE].selected + " "+tiles[(int)dx/Constants.TILE_SIZE][(int)dy/Constants.TILE_SIZE].path);
+                    tiles[(int) dx / Constants.TILE_SIZE][(int) dy / Constants.TILE_SIZE].changeSelected();
+                    System.out.println("X: " + (int) dx / Constants.TILE_SIZE + " Y: " + (int) dy / Constants.TILE_SIZE
+                            + " STATE: "
+                            + tiles[(int) dx / Constants.TILE_SIZE][(int) dy / Constants.TILE_SIZE].selected + " "
+                            + tiles[(int) dx / Constants.TILE_SIZE][(int) dy / Constants.TILE_SIZE].path);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
                 initUI();
             }
-        }, MouseButton.PRIMARY);
+        };
+
+        input.addAction(LeftClick, MouseButton.PRIMARY);
     }
 
     public static void main(String[] args) {
