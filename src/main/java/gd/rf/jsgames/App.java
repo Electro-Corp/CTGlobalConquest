@@ -15,6 +15,7 @@ import gd.rf.jsgames.ui.ui;
 import gd.rf.jsgames.units.Settler;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.scene.Node;
 import javafx.scene.control.TextInputDialog;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
@@ -40,14 +41,14 @@ public class App extends GameApplication {
     private static final int BOARD_SIZE = 2 * BOARD_THICK + 4 * TILE_SIZE;
     private static final int TOTAL_WIDTH = 2 * BOARD_X + BOARD_SIZE + 160;
     private static final int TOTAL_HEIGHT = 2 * BOARD_Y + BOARD_SIZE;
-    private final int TILE_COUNT_X = 16;
-    private final int TILE_COUNT_Y = 16;
+    private final static int TILE_COUNT_X = 16;
+    private final static int TILE_COUNT_Y = 16;
     private final Point MOUSE_OFFSET = AppSettings.MOUSE_OFFSET;
-    private final Tile[][] tiles = new Tile[TILE_COUNT_X][TILE_COUNT_Y];
+    private final static Tile[][] tiles = new Tile[TILE_COUNT_X][TILE_COUNT_Y];
     private final int BORDER_WIDTH = AppSettings.BORDER_WIDTH;
     private GameWorld gw;
-    private ObjectManager om;
-
+    private static ObjectManager om;
+    ui mainUI = new ui();
     @Override
     protected void initSettings(GameSettings settings) {
         settings.setWidth(1024);
@@ -66,6 +67,7 @@ public class App extends GameApplication {
                 tiles[j][i] = new Grass(j, i);
             }
         }
+    
         getGameScene().addUINode(mainUI);
         nextTurn();
         
