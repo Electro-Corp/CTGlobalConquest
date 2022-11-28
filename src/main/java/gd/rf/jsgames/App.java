@@ -78,6 +78,7 @@ public class App extends GameApplication {
         }
         for (int i = 0; i < om.units.size(); i++) {
             gw.addEntity(om.units.get(i).toEntity());
+            tiles[(int) om.units.get(i).x][(int) om.units.get(i).y].unitOn = om.units.get(i);
         }
     }
 
@@ -98,7 +99,6 @@ public class App extends GameApplication {
                 .view(new Rectangle(BOARD_SIZE, BOARD_SIZE, Color.LIGHTGRAY))
                 .buildAndAttach();
     }
-
     // private Entity createGrass(int x, int y) {
     // return new Grass(x, y);
     // }
@@ -109,19 +109,14 @@ public class App extends GameApplication {
         UserAction LeftClick = new UserAction("LeftClick") {
             @Override
             protected void onActionBegin() {
-                double dy = input.getMouseYWorld() + MOUSE_OFFSET.y;
-                double dx = input.getMouseXWorld() + MOUSE_OFFSET.x;
+                int dy = (int)(input.getMouseYWorld() + MOUSE_OFFSET.y) / (TILE_SIZE + BORDER_WIDTH);
+                int dx = (int)(input.getMouseXWorld() + MOUSE_OFFSET.x) / (TILE_SIZE
+                + BORDER_WIDTH);
                 try {
-                    tiles[(int) dx / (TILE_SIZE + BORDER_WIDTH)][(int) dy / (TILE_SIZE
-                            + BORDER_WIDTH)].changeSelected();
-                    System.out.println("X: " + (int) dx / (TILE_SIZE + BORDER_WIDTH) + " Y: " + (int) dy / (TILE_SIZE
-                            + BORDER_WIDTH)
-                            + " STATE: "
-                            + tiles[(int) dx / (TILE_SIZE
-                                    + BORDER_WIDTH)][(int) dy / (TILE_SIZE
-                                            + BORDER_WIDTH)].selected
-                            + " "
-                            + tiles[(int) dx / (TILE_SIZE + BORDER_WIDTH)][(int) dy / (TILE_SIZE + BORDER_WIDTH)].path);
+                    tiles[(int) dx ][(int) dy ].changeSelected();
+                    if(tiles[dx][dy].unitOn != null){
+                        System.out.println("There is a unit here!");
+                    }
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

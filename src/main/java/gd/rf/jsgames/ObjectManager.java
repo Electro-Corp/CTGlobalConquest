@@ -9,7 +9,7 @@ public class ObjectManager {
     public ArrayList<Unit> units = new ArrayList<>();
     public ArrayList<Structure> structures = new ArrayList<>();
     public ObjectManager(){
-
+        
     }
     public void updateObjects(){
         for(int i = 0; i < units.size(); i++){

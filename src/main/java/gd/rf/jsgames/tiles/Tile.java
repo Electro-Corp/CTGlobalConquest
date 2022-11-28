@@ -13,7 +13,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.Node;
 import javafx.scene.image.Image;
-
+import gd.rf.jsgames.units.*;
 /*
   TILE TYPES:
     [0] GRASS
@@ -38,7 +38,7 @@ public class Tile {
     // Defaults to grass icon
     public Node node = FXGL.getAssetLoader().loadTexture(path);
     public boolean selected = false;
-
+    public Unit unitOn = null;
     public Tile(double x, double y) {
         this.size = 30;
         this.x = x;
