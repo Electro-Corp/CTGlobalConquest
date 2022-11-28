@@ -46,7 +46,7 @@ public class App extends GameApplication {
     private final Point MOUSE_OFFSET = AppSettings.MOUSE_OFFSET;
     private final static Tile[][] tiles = new Tile[TILE_COUNT_X][TILE_COUNT_Y];
     private final int BORDER_WIDTH = AppSettings.BORDER_WIDTH;
-    private GameWorld gw;
+    private static GameWorld gw;
     private static ObjectManager om;
     ui mainUI = new ui();
     @Override

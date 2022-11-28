@@ -11,8 +11,17 @@ import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.scene.text.TextAlignment;
 
-public class GoodButton extends Button {
+public class GoodButton extends Button implements EventHandler {
     public GoodButton() {
+        this.setOnMouseEntered(mouseEvent -> this.setTextFill(Color.rgb(180, 180, 180)));
+        this.setOnMouseExited(mouseEvent -> this.setTextFill(Color.WHITE));
 
+        this.setTooltip(new Tooltip("Next Turn"));
+
+        this.setOnAction(this);
+    }
+
+    @Override
+    public void handle(Event event) {
     }
 }
