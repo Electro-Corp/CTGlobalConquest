@@ -12,5 +12,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.TextAlignment;
 
 public class GoodButton extends Button {
-    
+    public GoodButton() {
+
+    }
 }
