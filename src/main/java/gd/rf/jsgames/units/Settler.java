@@ -6,7 +6,7 @@ import gd.rf.jsgames.ObjectManager;
 public class Settler extends Unit {
   public Settler(float x, float y) {
     super(x, y);
-    iconPath = "src/main/resources/images/units/settler.png";
+    iconPath = "units/settler.png";
   }
   // @Override
   public void action(ObjectManager om){

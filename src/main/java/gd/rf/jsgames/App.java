@@ -71,10 +71,13 @@ public class App extends GameApplication {
                 gw.addEntity(tiles[j][i].toEntity());
             }
         }
+        for(int i = 0; i < om.units.size(); i++){
+            gw.addEntity(om.units.get(i).toEntity());
+        }
     }
 
     protected void renderGame() {
-        System.out.println("RENDER CALLED!!!");
+        //System.out.println("RENDER CALLED!!!");
         for (int i = 0; i < TILE_COUNT_Y; i++) {
             for (int j = 0; j < TILE_COUNT_X; j++) {
                 tiles[j][i].toEntity();
