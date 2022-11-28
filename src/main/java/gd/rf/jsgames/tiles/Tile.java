@@ -64,6 +64,6 @@ public class Tile {
 
     public Entity toEntity() {
         node = FXGL.getAssetLoader().loadTexture(path);
-        return new EntityBuilder().at(Constants.TILE_SIZE * x, Constants.TILE_SIZE * y).view(node).build();
+        return new EntityBuilder().at((Constants.TILE_SIZE + 3) * x, (Constants.TILE_SIZE + 3) * y).view(node).build();
     }
 }
