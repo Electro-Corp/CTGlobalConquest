@@ -6,11 +6,12 @@ import com.almasb.fxgl.dsl.EntityBuilder;
 import com.almasb.fxgl.dsl.FXGL;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.texture.Texture;
-import gd.rf.jsgames.Constants;
+import gd.rf.jsgames.AppSettings;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.Node;
 import javafx.scene.image.Image;
+
 public class Unit {
   public float x, y;
   public int toX, toY;
@@ -20,6 +21,7 @@ public class Unit {
   public int health = 100;
   public int moveSpeed = 1;
   public Node node = FXGL.getAssetLoader().loadTexture(iconPath);
+
   public Unit(float x, float y) {
     this.x = x;
     this.y = y;
@@ -70,12 +72,14 @@ public class Unit {
       }
     }
   }
+
   // public void action(ObjectManager om){
   // System.out.println("Unit has not been configured correctly, there is no
   // override for action!");
   // }
   public Entity toEntity() {
     node = FXGL.getAssetLoader().loadTexture(iconPath);
-    return new EntityBuilder().at(Constants.TILE_SIZE * x, Constants.TILE_SIZE * y).view(node).build();
+    return new EntityBuilder().at((AppSettings.TILE_SIZE + AppSettings.BORDER_WIDTH) * x,
+        (AppSettings.TILE_SIZE + AppSettings.BORDER_WIDTH) * y).view(node).build();
   }
 }

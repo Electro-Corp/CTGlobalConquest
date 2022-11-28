@@ -7,7 +7,8 @@ import com.almasb.fxgl.dsl.EntityBuilder;
 import com.almasb.fxgl.dsl.FXGL;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.texture.Texture;
-import gd.rf.jsgames.Constants;
+
+import gd.rf.jsgames.AppSettings;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.Node;
@@ -22,9 +23,9 @@ import javafx.scene.image.Image;
 */
 
 public class Tile {
-    private static final int TILE_SIZE = Constants.TILE_SIZE;
-    private static final int BOARD_X = Constants.BOARD_X;
-    private static final int BOARD_Y = Constants.BOARD_Y;
+    private static final int TILE_SIZE = AppSettings.TILE_SIZE;
+    private static final int BOARD_X = AppSettings.BOARD_X;
+    private static final int BOARD_Y = AppSettings.BOARD_Y;
 
     public double x, y;
     // Size defaults to 30;
@@ -64,6 +65,10 @@ public class Tile {
 
     public Entity toEntity() {
         node = FXGL.getAssetLoader().loadTexture(path);
-        return new EntityBuilder().at((Constants.TILE_SIZE + 3) * x, (Constants.TILE_SIZE + 3) * y).view(node).build();
+        return new EntityBuilder()
+                .at((AppSettings.TILE_SIZE + AppSettings.BORDER_WIDTH) * x,
+                        (AppSettings.TILE_SIZE + AppSettings.BORDER_WIDTH) * y)
+                .view(node)
+                .build();
     }
 }

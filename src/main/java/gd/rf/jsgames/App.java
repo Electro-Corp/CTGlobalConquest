@@ -8,6 +8,7 @@ import com.almasb.fxgl.entity.GameWorld;
 import com.almasb.fxgl.input.Input;
 import com.almasb.fxgl.input.UserAction;
 
+import gd.rf.jsgames.datatypes.Point;
 import gd.rf.jsgames.tiles.Grass;
 import gd.rf.jsgames.tiles.Tile;
 import gd.rf.jsgames.units.Settler;
@@ -31,16 +32,18 @@ import java.util.*;
 import java.util.Map;
 
 public class App extends GameApplication {
-    private static final int TILE_SIZE = Constants.TILE_SIZE;
-    private static final int BOARD_X = Constants.BOARD_X;
-    private static final int BOARD_Y = Constants.BOARD_Y;
-    private static final int BOARD_THICK = Constants.BOARD_THICK;
+    private static final int TILE_SIZE = AppSettings.TILE_SIZE;
+    private static final int BOARD_X = AppSettings.BOARD_X;
+    private static final int BOARD_Y = AppSettings.BOARD_Y;
+    private static final int BOARD_THICK = AppSettings.BOARD_THICK;
     private static final int BOARD_SIZE = 2 * BOARD_THICK + 4 * TILE_SIZE;
     private static final int TOTAL_WIDTH = 2 * BOARD_X + BOARD_SIZE + 160;
     private static final int TOTAL_HEIGHT = 2 * BOARD_Y + BOARD_SIZE;
     private final int TILE_COUNT_X = 16;
     private final int TILE_COUNT_Y = 16;
+    private final Point MOUSE_OFFSET = AppSettings.MOUSE_OFFSET;
     private final Tile[][] tiles = new Tile[TILE_COUNT_X][TILE_COUNT_Y];
+    private final int BORDER_WIDTH = AppSettings.BORDER_WIDTH;
     private GameWorld gw;
     private ObjectManager om;
 
@@ -73,7 +76,7 @@ public class App extends GameApplication {
                 gw.addEntity(tiles[j][i].toEntity());
             }
         }
-        for(int i = 0; i < om.units.size(); i++){
+        for (int i = 0; i < om.units.size(); i++) {
             gw.addEntity(om.units.get(i).toEntity());
         }
     }
@@ -81,6 +84,7 @@ public class App extends GameApplication {
     protected void renderGame() {
         
         //System.out.println("RENDER CALLED!!!");
+        // System.out.println("RENDER CALLED!!!");
         for (int i = 0; i < TILE_COUNT_Y; i++) {
             for (int j = 0; j < TILE_COUNT_X; j++) {
                 tiles[j][i].toEntity();
@@ -105,15 +109,20 @@ public class App extends GameApplication {
         UserAction LeftClick = new UserAction("LeftClick") {
             @Override
             protected void onActionBegin() {
-                double dy = input.getMouseYWorld();
-                double dx = input.getMouseXWorld();
+                double dy = input.getMouseYWorld() + MOUSE_OFFSET.y;
+                double dx = input.getMouseXWorld() + MOUSE_OFFSET.x;
                 try {
-                    tiles[(int) dx / Constants.TILE_SIZE][(int) dy / Constants.TILE_SIZE].changeSelected();
-                    System.out.println("X: " + (int) dx / Constants.TILE_SIZE + " Y: " + (int) dy / Constants.TILE_SIZE
+                    tiles[(int) dx / (TILE_SIZE + BORDER_WIDTH)][(int) dy / (TILE_SIZE
+                            + BORDER_WIDTH)].changeSelected();
+                    System.out.println("X: " + (int) dx / (TILE_SIZE + BORDER_WIDTH) + " Y: " + (int) dy / (TILE_SIZE
+                            + BORDER_WIDTH)
                             + " STATE: "
-                            + tiles[(int) dx / Constants.TILE_SIZE][(int) dy / Constants.TILE_SIZE].selected + " "
-                            + tiles[(int) dx / Constants.TILE_SIZE][(int) dy / Constants.TILE_SIZE].path);
-                } catch (FileNotFoundException e) {
+                            + tiles[(int) dx / (TILE_SIZE
+                                    + BORDER_WIDTH)][(int) dy / (TILE_SIZE
+                                            + BORDER_WIDTH)].selected
+                            + " "
+                            + tiles[(int) dx / (TILE_SIZE + BORDER_WIDTH)][(int) dy / (TILE_SIZE + BORDER_WIDTH)].path);
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
                 
