@@ -42,6 +42,7 @@ public class App extends GameApplication {
     private final int TILE_COUNT_Y = 16;
     private final Point MOUSE_OFFSET = AppSettings.MOUSE_OFFSET;
     private final Tile[][] tiles = new Tile[TILE_COUNT_X][TILE_COUNT_Y];
+    private final int BORDER_WIDTH = AppSettings.BORDER_WIDTH;
     private GameWorld gw;
     private ObjectManager om;
 
@@ -71,13 +72,13 @@ public class App extends GameApplication {
                 gw.addEntity(tiles[j][i].toEntity());
             }
         }
-        for(int i = 0; i < om.units.size(); i++){
+        for (int i = 0; i < om.units.size(); i++) {
             gw.addEntity(om.units.get(i).toEntity());
         }
     }
 
     protected void renderGame() {
-        //System.out.println("RENDER CALLED!!!");
+        // System.out.println("RENDER CALLED!!!");
         for (int i = 0; i < TILE_COUNT_Y; i++) {
             for (int j = 0; j < TILE_COUNT_X; j++) {
                 tiles[j][i].toEntity();
@@ -105,11 +106,16 @@ public class App extends GameApplication {
                 double dy = input.getMouseYWorld() + MOUSE_OFFSET.y;
                 double dx = input.getMouseXWorld() + MOUSE_OFFSET.x;
                 try {
-                    tiles[(int) dx / TILE_SIZE][(int) dy / TILE_SIZE].changeSelected();
-                    System.out.println("X: " + (int) dx / TILE_SIZE + " Y: " + (int) dy / TILE_SIZE
+                    tiles[(int) dx / (TILE_SIZE + BORDER_WIDTH)][(int) dy / (TILE_SIZE
+                            + BORDER_WIDTH)].changeSelected();
+                    System.out.println("X: " + (int) dx / (TILE_SIZE + BORDER_WIDTH) + " Y: " + (int) dy / (TILE_SIZE
+                            + BORDER_WIDTH)
                             + " STATE: "
-                            + tiles[(int) dx / TILE_SIZE][(int) dy / TILE_SIZE].selected + " "
-                            + tiles[(int) dx / TILE_SIZE][(int) dy / TILE_SIZE].path);
+                            + tiles[(int) dx / (TILE_SIZE
+                                    + BORDER_WIDTH)][(int) dy / (TILE_SIZE
+                                            + BORDER_WIDTH)].selected
+                            + " "
+                            + tiles[(int) dx / (TILE_SIZE + BORDER_WIDTH)][(int) dy / (TILE_SIZE + BORDER_WIDTH)].path);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
