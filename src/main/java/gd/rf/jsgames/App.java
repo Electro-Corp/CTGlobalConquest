@@ -11,6 +11,7 @@ import com.almasb.fxgl.input.UserAction;
 import gd.rf.jsgames.datatypes.Point;
 import gd.rf.jsgames.tiles.Grass;
 import gd.rf.jsgames.tiles.Tile;
+import gd.rf.jsgames.ui.ui;
 import gd.rf.jsgames.units.Settler;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -46,11 +47,12 @@ public class App extends GameApplication {
     private final int BORDER_WIDTH = AppSettings.BORDER_WIDTH;
     private GameWorld gw;
     private ObjectManager om;
+    ui mainUI = new ui();
 
     @Override
     protected void initSettings(GameSettings settings) {
-        settings.setWidth(800);
-        settings.setHeight(600);
+        settings.setWidth(1024);
+        settings.setHeight(720);
         settings.setTitle("Chinmay Tiwari's Global Conquest");
     }
 
@@ -65,6 +67,7 @@ public class App extends GameApplication {
                 tiles[j][i] = new Grass(j, i);
             }
         }
+        getGameScene().addUINode(mainUI);
         nextTurn();
         
     }
@@ -79,6 +82,7 @@ public class App extends GameApplication {
         for (int i = 0; i < om.units.size(); i++) {
             gw.addEntity(om.units.get(i).toEntity());
         }
+        
     }
 
     protected void renderGame() {
