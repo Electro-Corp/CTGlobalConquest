@@ -65,7 +65,7 @@ public class App extends GameApplication {
                 tiles[j][i] = new Grass(j, i);
             }
         }
-
+        nextTurn();
         
     }
 
@@ -78,7 +78,6 @@ public class App extends GameApplication {
         }
         for (int i = 0; i < om.units.size(); i++) {
             gw.addEntity(om.units.get(i).toEntity());
-            tiles[(int) om.units.get(i).x][(int) om.units.get(i).y].unitOn = om.units.get(i);
         }
     }
 
@@ -102,13 +101,16 @@ public class App extends GameApplication {
     // private Entity createGrass(int x, int y) {
     // return new Grass(x, y);
     // }
-
+    private void nextTurn(){
+        om.updateObjects(tiles);
+    }
     protected void initInput() {
         Input input = getInput();
 
         UserAction LeftClick = new UserAction("LeftClick") {
             @Override
             protected void onActionBegin() {
+                
                 int dy = (int)(input.getMouseYWorld() + MOUSE_OFFSET.y) / (TILE_SIZE + BORDER_WIDTH);
                 int dx = (int)(input.getMouseXWorld() + MOUSE_OFFSET.x) / (TILE_SIZE
                 + BORDER_WIDTH);
