@@ -12,9 +12,11 @@ import com.almasb.fxgl.input.UserAction;
 import gd.rf.jsgames.datatypes.Point;
 import gd.rf.jsgames.tiles.Grass;
 import gd.rf.jsgames.tiles.Tile;
+import gd.rf.jsgames.ui.ui;
 import gd.rf.jsgames.units.Settler;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.scene.Node;
 import javafx.scene.control.TextInputDialog;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
@@ -26,7 +28,6 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import com.almasb.fxgl.ui.*;
 import static com.almasb.fxgl.dsl.FXGL.*;
-
 import java.io.FileNotFoundException;
 import java.util.*;
 
@@ -40,20 +41,19 @@ public class App extends GameApplication {
     private static final int BOARD_SIZE = 2 * BOARD_THICK + 4 * TILE_SIZE;
     private static final int TOTAL_WIDTH = 2 * BOARD_X + BOARD_SIZE + 160;
     private static final int TOTAL_HEIGHT = 2 * BOARD_Y + BOARD_SIZE;
-    private final int TILE_COUNT_X = 16;
-    private final int TILE_COUNT_Y = 16;
-    private int TILE_OFFSET_X = 0;
-    private int TILE_OFFSET_Y = 0;
+    private final static int TILE_COUNT_X = 16;
+    private final static int TILE_COUNT_Y = 16;
     private final Point MOUSE_OFFSET = AppSettings.MOUSE_OFFSET;
-    private final Tile[][] tiles = new Tile[TILE_COUNT_X][TILE_COUNT_Y];
+    private final static Tile[][] tiles = new Tile[TILE_COUNT_X][TILE_COUNT_Y];
     private final int BORDER_WIDTH = AppSettings.BORDER_WIDTH;
-    private GameWorld gw;
-    private ObjectManager om;
-
+    private static GameWorld gw;
+    private static ObjectManager om;
+    GameSettings settings = new GameSettings();
+    ui mainUI = new ui();
     @Override
     protected void initSettings(GameSettings settings) {
-        settings.setWidth(800);
-        settings.setHeight(600);
+        settings.setWidth(1024);
+        settings.setHeight(720);
         settings.setTitle("Chinmay Tiwari's Global Conquest");
     }
 
@@ -68,8 +68,10 @@ public class App extends GameApplication {
                 tiles[j][i] = new Grass(j, i);
             }
         }
+    
+        getGameScene().addUINode(mainUI);
         nextTurn();
-        
+        settings.setAppIcon("icon.png");
     }
 
     protected void initUI() {
@@ -82,6 +84,7 @@ public class App extends GameApplication {
         for (int i = 0; i < om.units.size(); i++) {
             gw.addEntity(om.units.get(i).toEntity());
         }
+        
     }
 
     protected void renderGame() {
@@ -104,7 +107,7 @@ public class App extends GameApplication {
     // private Entity createGrass(int x, int y) {
     // return new Grass(x, y);
     // }
-    private void nextTurn(){
+    private static void nextTurn(){
         om.updateObjects(tiles);
     }
     protected void initInput() {
@@ -137,6 +140,10 @@ public class App extends GameApplication {
         input.addAction(LeftClick, MouseButton.PRIMARY);
     }
 
+
+    public static void update() {
+        nextTurn();
+    }
     public static void main(String[] args) {
         launch(args);
         
