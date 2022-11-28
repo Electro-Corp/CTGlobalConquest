@@ -27,7 +27,6 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import com.almasb.fxgl.ui.*;
 import static com.almasb.fxgl.dsl.FXGL.*;
-
 import java.io.FileNotFoundException;
 import java.util.*;
 
@@ -48,6 +47,7 @@ public class App extends GameApplication {
     private final int BORDER_WIDTH = AppSettings.BORDER_WIDTH;
     private GameWorld gw;
     private static ObjectManager om;
+    GameSettings settings = new GameSettings();
     ui mainUI = new ui();
     @Override
     protected void initSettings(GameSettings settings) {
@@ -70,7 +70,7 @@ public class App extends GameApplication {
     
         getGameScene().addUINode(mainUI);
         nextTurn();
-        
+        settings.setAppIcon("icon.png");
     }
 
     protected void initUI() {
