@@ -31,7 +31,7 @@ import java.io.FileNotFoundException;
 import java.util.*;
 
 import java.util.Map;
-
+//https://github.com/AlmasB/FXGL/issues/526
 public class App extends GameApplication {
     private static final int TILE_SIZE = AppSettings.TILE_SIZE;
     private static final int BOARD_X = AppSettings.BOARD_X;
