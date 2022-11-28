@@ -22,6 +22,7 @@ import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import com.almasb.fxgl.ui.*;
 import static com.almasb.fxgl.dsl.FXGL.*;
 
 import java.io.FileNotFoundException;
@@ -61,9 +62,12 @@ public class App extends GameApplication {
                 tiles[j][i] = new Grass(j, i);
             }
         }
+
+        
     }
 
     protected void initUI() {
+        
         for (int i = 0; i < TILE_COUNT_Y; i++) {
             for (int j = 0; j < TILE_COUNT_X; j++) {
                 gw.addEntity(tiles[j][i].toEntity());
@@ -75,6 +79,7 @@ public class App extends GameApplication {
     }
 
     protected void renderGame() {
+        
         //System.out.println("RENDER CALLED!!!");
         for (int i = 0; i < TILE_COUNT_Y; i++) {
             for (int j = 0; j < TILE_COUNT_X; j++) {
@@ -111,6 +116,7 @@ public class App extends GameApplication {
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
+                
                 initUI();
             }
         };
@@ -120,5 +126,6 @@ public class App extends GameApplication {
 
     public static void main(String[] args) {
         launch(args);
+        
     }
 }
