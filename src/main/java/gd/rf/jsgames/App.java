@@ -47,7 +47,6 @@ public class App extends GameApplication {
     private final int BORDER_WIDTH = AppSettings.BORDER_WIDTH;
     private GameWorld gw;
     private ObjectManager om;
-    ui mainUI = new ui();
 
     @Override
     protected void initSettings(GameSettings settings) {
@@ -105,7 +104,7 @@ public class App extends GameApplication {
     // private Entity createGrass(int x, int y) {
     // return new Grass(x, y);
     // }
-    private void nextTurn(){
+    private static void nextTurn(){
         om.updateObjects(tiles);
     }
     protected void initInput() {
@@ -134,6 +133,10 @@ public class App extends GameApplication {
         input.addAction(LeftClick, MouseButton.PRIMARY);
     }
 
+
+    public static void update() {
+        nextTurn();
+    }
     public static void main(String[] args) {
         launch(args);
         
