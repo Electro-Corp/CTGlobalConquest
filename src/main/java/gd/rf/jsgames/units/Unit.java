@@ -2,16 +2,24 @@ package gd.rf.jsgames.units;
 
 import gd.rf.jsgames.tiles.Tile;
 // import gd.rf.jsgames.ObjectManager;
-
+import com.almasb.fxgl.dsl.EntityBuilder;
+import com.almasb.fxgl.dsl.FXGL;
+import com.almasb.fxgl.entity.Entity;
+import com.almasb.fxgl.texture.Texture;
+import gd.rf.jsgames.Constants;
+import javafx.scene.image.ImageView;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.Node;
+import javafx.scene.image.Image;
 public class Unit {
   public float x, y;
   public int toX, toY;
   public boolean isMoving = false;
   public Tile tileOn;
-  public String iconPath = "src/main/resources/images/units/settler.png";
+  public String iconPath = "units/settler.png";
   public int health = 100;
   public int moveSpeed = 1;
-
+  public Node node = FXGL.getAssetLoader().loadTexture(iconPath);
   public Unit(float x, float y) {
     this.x = x;
     this.y = y;
@@ -66,4 +74,8 @@ public class Unit {
   // System.out.println("Unit has not been configured correctly, there is no
   // override for action!");
   // }
+  public Entity toEntity() {
+    node = FXGL.getAssetLoader().loadTexture(iconPath);
+    return new EntityBuilder().at(Constants.TILE_SIZE * x, Constants.TILE_SIZE * y).view(node).build();
+  }
 }
