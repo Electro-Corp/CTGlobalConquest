@@ -61,7 +61,8 @@ public class Unit {
           x += (toX - x) - ((toX - x) - 1);
         else
           x -= (toX - x) - ((toX - x) - 1);
-        if (toY > y)
+        
+          if (toY > y)
           y += (toY - y) - ((toY - y) - 1);
         else
           y -= (toY - y) - ((toY - y) - 1);
