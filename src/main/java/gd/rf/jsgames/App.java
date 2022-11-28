@@ -130,6 +130,10 @@ public class App extends GameApplication {
         input.addAction(LeftClick, MouseButton.PRIMARY);
     }
 
+
+    public void update() {
+        
+    }
     public static void main(String[] args) {
         launch(args);
         
