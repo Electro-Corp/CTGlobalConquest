@@ -2,6 +2,7 @@ package gd.rf.jsgames;
 
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.app.GameSettings;
+import com.almasb.fxgl.app.scene.SceneFactory;
 import com.almasb.fxgl.dsl.EntityBuilder;
 import com.almasb.fxgl.dsl.FXGL;
 import com.almasb.fxgl.entity.Entity;
@@ -48,6 +49,7 @@ public class App extends GameApplication {
     private final int BORDER_WIDTH = AppSettings.BORDER_WIDTH;
     private static GameWorld gw;
     private static ObjectManager om;
+    private SceneFactory sf = new SceneFactory();
     GameSettings settings = new GameSettings();
     ui mainUI;
     @Override
@@ -55,6 +57,7 @@ public class App extends GameApplication {
         settings.setWidth(1024);
         settings.setHeight(720);
         settings.setTitle("Chinmay Tiwari's Global Conquest");
+        settings.setIntroEnabled(true);
     }
 
     protected void initGame() {
