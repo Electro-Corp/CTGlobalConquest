@@ -11,5 +11,10 @@ public class ui extends VBox{
         this.setSpacing(0);
         this.setTranslateX(900);
         this.setTranslateY(0);
+        initUI();
+    }
+
+    private void initUI() {
+        this.getChildren().add(this.nextTurn);
     }
 }

@@ -5,6 +5,7 @@ import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.ContentDisplay;
+import javafx.scene.control.Label;
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -23,5 +24,8 @@ public class GoodButton extends Button implements EventHandler {
 
     @Override
     public void handle(Event event) {
+    }
+
+    private class GoodLabel extends Label {
     }
 }
