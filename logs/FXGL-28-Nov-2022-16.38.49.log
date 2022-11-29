@@ -1,0 +1,1481 @@
+16:38:40.526 [main                     ] DEBUG GameApplication      - Logger initialized
+16:38:40.556 [main                     ] DEBUG GameApplication      - Logging settings
+Title: Chinmay Tiwari's Global Conquest
+Version: 0.0
+Width: 1024
+Height: 720
+Fullscreen: false
+Intro: false
+Profiling: false
+Single step:false
+App Mode: DEVELOPER
+Menu Key: ESCAPE
+Stage Style: DECORATED
+Scene Factory: class com.almasb.fxgl.app.scene.SceneFactory
+
+16:38:41.002 [JavaFX Application Thread] DEBUG GameApplication      - Initializing FXGL
+16:38:41.025 [JavaFX Application Thread] INFO  Engine               - FXGL-11.9 (27.05.2020 17.06) on LINUX (J:11.0.17 FX:11)
+16:38:41.027 [JavaFX Application Thread] DEBUG Engine               - JRE Vendor Name: Ubuntu
+16:38:41.028 [JavaFX Application Thread] DEBUG Engine               - Running on OS: Linux version 4.9.253-tegra
+16:38:41.029 [JavaFX Application Thread] DEBUG Engine               - Architecture: aarch64
+16:38:41.030 [JavaFX Application Thread] INFO  Engine               - Source code and latest versions at: https://github.com/AlmasB/FXGL
+16:38:41.031 [JavaFX Application Thread] INFO  Engine               -              Join the FXGL chat at: https://gitter.im/AlmasB/FXGL
+16:38:41.278 [JavaFX Application Thread] DEBUG MainWindow           - Creating a JavaFX scene
+16:38:41.666 [JavaFX Application Thread] DEBUG MainWindow           - Target settings size: 1024.0 x 720.0
+16:38:41.667 [JavaFX Application Thread] DEBUG MainWindow           - Scaled scene size:    1024.0 x 720.0
+16:38:41.668 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (1.0, 1.0)
+16:38:41.672 [JavaFX Application Thread] DEBUG MainWindow           - Set initial scene to FXGLStartupScene
+16:38:41.690 [JavaFX Application Thread] DEBUG MainWindow           - Opening main window
+16:38:41.828 [JavaFX Application Thread] DEBUG MainWindow           - Window border size: (0.0, 30.0)
+16:38:41.829 [JavaFX Application Thread] DEBUG MainWindow           - Scaled size: 1024.0 x 720.0
+16:38:41.830 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (1.0, 1.0)
+16:38:41.831 [JavaFX Application Thread] DEBUG MainWindow           - Scene size: 1024.0 x 720.0
+16:38:41.831 [JavaFX Application Thread] DEBUG MainWindow           - Stage size: 1024.0 x 750.0
+16:38:41.859 [FXGL Background Thread 1 ] DEBUG Engine               - Initializing environment variables
+16:38:42.086 [FXGL Background Thread 1 ] DEBUG WindowService        - Applying CSS: fxgl_dark.css
+16:38:42.087 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/ui/css/fxgl_dark.css
+16:38:42.464 [FXGL Background Thread 1 ] DEBUG WindowService        - Initializing application scenes
+16:38:42.838 [FXGL Background Thread 1 ] DEBUG GameWorld            - Game world initialized
+16:38:43.021 [FXGL Background Thread 1 ] DEBUG PhysicsWorld         - Physics world initialized: appHeight=720, physics.ppm=50.0
+16:38:43.041 [FXGL Background Thread 1 ] DEBUG GameScene            - Game scene initialized: 1024x720
+16:38:43.168 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/textures/particles/trace_horizontal.png
+16:38:43.331 [FXGL Background Thread 1 ] DEBUG FXGL.DefaultMenu     - createMenuBodyGameMenu()
+16:38:43.380 [FXGL Background Thread 1 ] DEBUG FXGL.DefaultMenu     - createOptionsMenu()
+16:38:43.402 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/textures/particles/smoke.png
+16:38:43.611 [FXGL Background Thread 1 ] DEBUG WindowService        - Application scenes initialized
+16:38:43.654 [FXGL Background Thread 1 ] DEBUG SystemBundleService  - Loading FXGL system data
+16:38:43.665 [FXGL Background Thread 1 ] DEBUG FileSystemAccess     - Reading from: /home/segfault/fx/CTGlobalConquest/system/fxgl.bundle
+16:38:43.685 [FXGL Background Thread 1 ] DEBUG SystemBundleService  - Bundle FXGL: {}
+16:38:43.686 [FXGL Background Thread 1 ] INFO  Engine               - FXGL initialization took: 1.814 sec
+16:38:43.691 [FXGL Background Thread 1 ] DEBUG GameApplication      - Loading localizations
+16:38:43.695 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/languages/english.lang
+16:38:43.740 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/languages/french.lang
+16:38:43.755 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/languages/german.lang
+16:38:43.764 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/languages/hungarian.lang
+16:38:43.781 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/languages/russian.lang
+16:38:43.790 [FXGL Background Thread 1 ] DEBUG GameApplication      - Registering font factories with UI factory
+16:38:43.790 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/ui/fonts/VarelaRound-Regular.ttf
+16:38:43.843 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/ui/fonts/Abel-Regular.ttf
+16:38:43.849 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/ui/fonts/lucida_console.ttf
+16:38:43.858 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/ui/fonts/Courier-Prime.ttf
+16:38:43.895 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Left - A
+16:38:43.898 [JavaFX Application Thread] DEBUG Input                - Registered new binding: LeftClick - LMB
+16:38:43.899 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/textures/fxgl_icon.png
+16:38:43.997 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/ui/cursors/fxgl_default.png
+16:38:44.007 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Screenshot - P
+16:38:44.009 [JavaFX Application Thread] DEBUG Input                - Registered new binding: System info dump - CTRL+9
+16:38:44.010 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Restart - CTRL+R
+16:38:44.012 [JavaFX Application Thread] DEBUG LoopRunner           - Starting loop
+16:38:44.036 [JavaFX Application Thread] DEBUG FXGLStartupScene     - STARTUP
+16:38:44.037 [JavaFX Application Thread] DEBUG WindowService        - Starting new game
+16:38:44.039 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+16:38:44.087 [JavaFX Application Thread] DEBUG WindowService        - Removing overlay from FXGLStartupScene and adding to FXGLLoadingScene
+16:38:44.089 [JavaFX Application Thread] DEBUG MainWindow           - FXGLStartupScene -> FXGLLoadingScene
+16:38:44.089 [JavaFX Application Thread] DEBUG WindowService        - Clearing previous game
+16:38:44.090 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+16:38:44.090 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+16:38:44.091 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+16:38:44.094 [FXGL Background Thread 1 ] DEBUG GameApplication      - Initializing game
+16:38:44.101 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/textures/units/settler.png
+16:38:44.106 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/textures/tiles/grass_selected.png
+16:38:44.108 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.109 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.109 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.110 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.111 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.111 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.112 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.113 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.114 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.114 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.115 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.116 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.117 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.118 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.119 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.119 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.120 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.121 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.122 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.122 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.123 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.123 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.124 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.124 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.125 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.126 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.126 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.127 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.128 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.128 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.129 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.130 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.131 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.131 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.132 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.133 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.134 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.135 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.135 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.136 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.137 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.137 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.138 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.139 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.140 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.140 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.141 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.142 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.142 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.143 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.144 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.145 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.145 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.146 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.147 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.147 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.148 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.148 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.149 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.150 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.151 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.152 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.153 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.153 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.154 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.155 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.155 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.156 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.156 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.157 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.157 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.158 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.158 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.159 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.160 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.160 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.161 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.161 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.162 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.162 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.163 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.163 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.164 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.165 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.165 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.166 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.166 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.167 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.167 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.168 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.169 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.169 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.170 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.170 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.171 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.171 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.172 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.173 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.173 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.174 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.174 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.175 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.175 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.176 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.177 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.178 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.178 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.179 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.180 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.180 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.181 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.181 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.182 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.182 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.183 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.183 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.184 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.184 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.185 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.186 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.186 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.187 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.187 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.188 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.188 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.189 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.189 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.190 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.190 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.191 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.191 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.192 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.192 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.193 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.193 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.194 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.194 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.195 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.195 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.195 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.196 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.196 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.197 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.197 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.198 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.198 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.199 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.199 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.200 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.200 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.201 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.201 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.202 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.202 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.203 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.203 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.204 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.204 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.205 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.205 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.206 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.217 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.218 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.219 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.219 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.220 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.220 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.221 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.221 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.222 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.222 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.223 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.223 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.224 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.224 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.225 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.225 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.226 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.226 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.227 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.227 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.228 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.228 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.229 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.229 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.230 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.230 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.231 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.231 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.232 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.232 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.233 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.233 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.234 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.234 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.235 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.235 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.235 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.236 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.236 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.237 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.237 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.238 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.238 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.239 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.239 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.240 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.240 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.241 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.241 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.242 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.242 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.243 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.243 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.244 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.244 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.245 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.245 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.246 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.246 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.247 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.247 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.247 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.248 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.248 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.249 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.249 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.250 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.250 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.251 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.251 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.252 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.252 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.252 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.253 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.253 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.254 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.254 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.255 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.255 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.256 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.256 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.256 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.262 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.262 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.263 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.263 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.264 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.274 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.274 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.275 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.275 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.275 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.276 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.276 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:44.277 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/textures/tiles/grass.png
+16:38:44.296 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.299 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.302 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.317 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.320 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.323 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.326 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.328 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.346 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.349 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.352 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.355 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.357 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.360 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.363 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.366 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.372 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.375 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.391 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.394 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.408 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.413 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.417 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.419 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.422 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.425 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.429 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.432 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.435 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.442 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.445 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.447 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.450 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.453 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.455 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.458 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.460 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.463 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.465 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.467 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.470 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.472 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.474 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.477 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.479 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.481 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.483 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.485 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.488 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.490 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.492 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.494 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.496 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.499 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.501 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.503 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.505 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.508 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.510 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.513 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.516 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.518 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.520 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.524 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.527 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.529 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.531 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.533 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.535 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.538 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.540 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.542 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.544 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.546 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.548 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.550 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.552 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.554 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.557 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.559 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.561 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.563 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.566 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.568 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.570 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.572 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.574 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.576 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.578 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.581 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.583 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.586 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.588 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.590 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.592 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.594 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.596 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.598 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.600 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.602 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.604 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.606 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.608 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.610 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.612 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.614 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.616 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.619 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.621 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.623 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.625 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.627 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.629 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.631 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.632 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.634 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.636 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.638 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.640 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.642 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.644 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.646 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.648 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.650 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.652 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.654 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.655 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.657 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.659 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.660 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.662 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.663 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.664 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.666 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.668 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.670 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.672 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.674 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.676 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.677 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.679 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.681 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.682 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.684 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.686 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.687 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.688 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.690 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.692 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.693 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.695 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.697 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.698 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.700 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.702 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.704 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.705 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.707 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.709 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.711 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.712 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.720 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.722 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.723 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.725 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.727 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.728 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.730 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.731 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.733 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.735 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.736 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.738 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.739 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.741 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.743 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.744 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.746 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.747 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.748 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.750 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.752 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.753 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.755 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.756 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.757 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.759 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.760 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.763 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.765 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.766 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.768 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.771 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.773 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.776 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.777 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.778 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.779 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.781 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.782 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.783 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.785 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.787 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.788 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.789 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.791 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.792 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.794 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.795 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.797 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.798 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.799 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.801 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.803 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.804 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.806 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.807 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.808 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.810 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.811 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.812 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.814 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.815 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.817 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.819 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.820 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.822 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.823 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.825 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.826 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.827 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.828 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.830 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.831 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.832 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.833 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.834 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.836 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.838 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.839 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.840 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.841 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.843 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.844 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.846 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.847 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.848 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.850 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.851 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.853 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.855 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.856 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.857 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.859 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.860 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:44.862 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/units/settler.png
+16:38:44.864 [FXGL Background Thread 1 ] INFO  GameApplication      - Game initialization took: 0.769 sec
+16:38:44.888 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+16:38:45.126 [JavaFX Application Thread] DEBUG WindowService        - Removing overlay from FXGLLoadingScene and adding to GameScene
+16:38:45.128 [JavaFX Application Thread] DEBUG MainWindow           - FXGLLoadingScene -> GameScene
+16:38:45.824 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.827 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.829 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.830 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.831 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.832 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.832 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.833 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.835 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.836 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.837 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.838 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.839 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.840 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.841 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.842 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.843 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.844 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.846 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.847 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.847 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.848 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.849 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.851 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.852 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.853 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.854 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.855 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.856 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.857 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.858 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.859 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.860 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.862 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.863 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.864 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.865 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.867 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.868 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.869 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.870 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.871 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.872 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.873 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.874 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.875 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.876 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.876 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.877 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.878 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.879 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.881 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.882 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.883 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.884 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.885 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.886 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.888 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.889 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.890 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.891 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.892 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.894 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.895 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.896 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.898 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.899 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.901 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.902 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.903 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.904 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.905 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.906 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.907 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.908 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.909 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.910 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.911 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.912 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.913 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.914 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.915 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.916 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.917 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.918 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.919 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.920 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.921 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.922 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.923 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.925 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.926 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.927 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.928 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.930 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.931 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.932 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.934 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.935 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.936 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.938 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.939 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.940 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.975 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.977 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.978 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.979 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.981 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.982 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.983 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.984 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.985 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.987 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.988 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.989 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.990 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.991 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.992 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.992 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.993 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.994 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.995 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.996 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.998 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:45.999 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.000 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.001 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.002 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.004 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.005 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.006 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.007 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.008 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.009 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.010 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.011 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.012 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.013 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.014 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.016 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.017 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.018 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.019 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.020 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.021 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.022 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.023 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.024 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.025 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.026 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.027 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.027 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.028 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.029 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.030 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.030 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.031 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.032 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.033 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.034 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.035 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.035 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.037 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.038 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.038 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.039 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.040 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.041 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:46.042 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.042 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.043 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.044 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.045 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.045 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.046 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.047 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.048 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.048 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.049 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.050 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.051 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.052 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.052 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.053 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.054 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.055 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.056 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.057 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.058 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.059 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.060 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.061 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.062 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.063 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.064 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.065 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.066 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.068 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.069 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.070 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.071 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.072 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.073 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.074 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.075 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.076 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.077 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.078 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.079 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.080 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.081 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.081 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.082 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.084 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.085 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.086 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.087 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.088 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.089 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.090 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.091 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.092 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.093 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.094 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.095 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.095 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.096 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.097 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.098 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.099 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.099 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.100 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.101 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.102 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.103 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.104 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.105 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.106 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.106 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.107 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.108 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.109 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.110 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.111 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.112 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.112 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.113 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.114 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.115 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.116 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.117 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.119 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.120 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.122 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.123 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.124 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.125 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/units/settler.png
+16:38:46.689 [FXGL Background Thread 2 ] DEBUG Engine               - Logging environment variables
+16:38:46.694 [FXGL Background Thread 2 ] DEBUG Engine               - achievements: []
+16:38:46.695 [FXGL Background Thread 2 ] DEBUG Engine               - appIcon: fxgl_icon.png
+16:38:46.695 [FXGL Background Thread 2 ] DEBUG Engine               - applicationMode: DEVELOPER
+16:38:46.695 [FXGL Background Thread 2 ] DEBUG Engine               - cSSList: [fxgl_dark.css]
+16:38:46.695 [FXGL Background Thread 2 ] DEBUG Engine               - configClass: Optional.empty
+16:38:46.695 [FXGL Background Thread 2 ] DEBUG Engine               - credits: []
+16:38:46.696 [FXGL Background Thread 2 ] DEBUG Engine               - devBBoxColorProperty: ObjectProperty [value: 0xff0000ff]
+16:38:46.696 [FXGL Background Thread 2 ] DEBUG Engine               - devSensorColorProperty: ObjectProperty [value: 0xffff00ff]
+16:38:46.696 [FXGL Background Thread 2 ] DEBUG Engine               - devShowBBoxProperty: BooleanProperty [value: false]
+16:38:46.696 [FXGL Background Thread 2 ] DEBUG Engine               - devShowPositionProperty: BooleanProperty [value: false]
+16:38:46.696 [FXGL Background Thread 2 ] DEBUG Engine               - enabledMenuItems: []
+16:38:46.697 [FXGL Background Thread 2 ] DEBUG Engine               - engineServices: [class com.almasb.fxgl.app.GameApplication$GameApplicationService, class com.almasb.fxgl.app.services.WindowService, class com.almasb.fxgl.app.services.FXGLDialogService, class com.almasb.fxgl.app.services.IOTaskExecutorService, class com.almasb.fxgl.event.EventBusService, class com.almasb.fxgl.io.FileSystemService, class com.almasb.fxgl.localization.LocalizationService, class com.almasb.fxgl.app.services.AssetLoaderService, class com.almasb.fxgl.app.services.SystemBundleService, class com.almasb.fxgl.profile.SaveLoadService, class com.almasb.fxgl.ui.FXGLUIFactoryServiceProvider, class com.almasb.fxgl.ui.FXGLDialogFactoryServiceProvider, class com.almasb.fxgl.audio.AudioPlayer, class com.almasb.fxgl.notification.impl.NotificationServiceProvider, class com.almasb.fxgl.achievement.AchievementService, class com.almasb.fxgl.cutscene.CutsceneService, class com.almasb.fxgl.minigames.MiniGameService, class com.almasb.fxgl.net.NetService, class com.almasb.fxgl.app.services.UpdaterService, class com.almasb.fxgl.dev.DevService]
+16:38:46.697 [FXGL Background Thread 2 ] DEBUG Engine               - fontGame: Abel-Regular.ttf
+16:38:46.697 [FXGL Background Thread 2 ] DEBUG Engine               - fontMono: lucida_console.ttf
+16:38:46.697 [FXGL Background Thread 2 ] DEBUG Engine               - fontText: Courier-Prime.ttf
+16:38:46.697 [FXGL Background Thread 2 ] DEBUG Engine               - fontUI: VarelaRound-Regular.ttf
+16:38:46.697 [FXGL Background Thread 2 ] DEBUG Engine               - fullScreen: BooleanProperty [value: false]
+16:38:46.697 [FXGL Background Thread 2 ] DEBUG Engine               - gameDifficulty: MEDIUM
+16:38:46.697 [FXGL Background Thread 2 ] DEBUG Engine               - gameDifficultyProperty: ObjectProperty [value: MEDIUM]
+16:38:46.698 [FXGL Background Thread 2 ] DEBUG Engine               - globalMusicVolume: 0.5
+16:38:46.698 [FXGL Background Thread 2 ] DEBUG Engine               - globalMusicVolumeProperty: DoubleProperty [value: 0.5]
+16:38:46.698 [FXGL Background Thread 2 ] DEBUG Engine               - globalSoundVolume: 0.5
+16:38:46.698 [FXGL Background Thread 2 ] DEBUG Engine               - globalSoundVolumeProperty: DoubleProperty [value: 0.5]
+16:38:46.698 [FXGL Background Thread 2 ] DEBUG Engine               - height: 720
+16:38:46.698 [FXGL Background Thread 2 ] DEBUG Engine               - isAndroid: false
+16:38:46.699 [FXGL Background Thread 2 ] DEBUG Engine               - isBrowser: false
+16:38:46.699 [FXGL Background Thread 2 ] DEBUG Engine               - isClickFeedbackEnabled: false
+16:38:46.699 [FXGL Background Thread 2 ] DEBUG Engine               - isCloseConfirmation: false
+16:38:46.699 [FXGL Background Thread 2 ] DEBUG Engine               - isDesktop: true
+16:38:46.699 [FXGL Background Thread 2 ] DEBUG Engine               - isDeveloperMenuEnabled: false
+16:38:46.699 [FXGL Background Thread 2 ] DEBUG Engine               - isExperimentalNative: false
+16:38:46.699 [FXGL Background Thread 2 ] DEBUG Engine               - isExperimentalTiledLargeMap: false
+16:38:46.699 [FXGL Background Thread 2 ] DEBUG Engine               - isFullScreenAllowed: false
+16:38:46.699 [FXGL Background Thread 2 ] DEBUG Engine               - isFullScreenFromStart: false
+16:38:46.700 [FXGL Background Thread 2 ] DEBUG Engine               - isGameMenuEnabled: true
+16:38:46.700 [FXGL Background Thread 2 ] DEBUG Engine               - isIOS: false
+16:38:46.700 [FXGL Background Thread 2 ] DEBUG Engine               - isIntroEnabled: false
+16:38:46.700 [FXGL Background Thread 2 ] DEBUG Engine               - isLinux: true
+16:38:46.700 [FXGL Background Thread 2 ] DEBUG Engine               - isMac: false
+16:38:46.700 [FXGL Background Thread 2 ] DEBUG Engine               - isMainMenuEnabled: false
+16:38:46.700 [FXGL Background Thread 2 ] DEBUG Engine               - isManualResizeEnabled: false
+16:38:46.700 [FXGL Background Thread 2 ] DEBUG Engine               - isMobile: false
+16:38:46.700 [FXGL Background Thread 2 ] DEBUG Engine               - isPreserveResizeRatio: false
+16:38:46.700 [FXGL Background Thread 2 ] DEBUG Engine               - isProfilingEnabled: false
+16:38:46.700 [FXGL Background Thread 2 ] DEBUG Engine               - isSingleStep: false
+16:38:46.701 [FXGL Background Thread 2 ] DEBUG Engine               - isUserProfileEnabled: false
+16:38:46.701 [FXGL Background Thread 2 ] DEBUG Engine               - isWindows: false
+16:38:46.701 [FXGL Background Thread 2 ] DEBUG Engine               - language: ObjectProperty [value: ENGLISH]
+16:38:46.701 [FXGL Background Thread 2 ] DEBUG Engine               - mainWindow: com.almasb.fxgl.app.MainWindow@67a01063
+16:38:46.701 [FXGL Background Thread 2 ] DEBUG Engine               - menuKey: ESCAPE
+16:38:46.701 [FXGL Background Thread 2 ] DEBUG Engine               - notificationViewClass: class com.almasb.fxgl.notification.view.XboxNotificationView
+16:38:46.701 [FXGL Background Thread 2 ] DEBUG Engine               - pixelsPerMeter: 50.0
+16:38:46.701 [FXGL Background Thread 2 ] DEBUG Engine               - platform: LINUX
+16:38:46.701 [FXGL Background Thread 2 ] DEBUG Engine               - profileDir: profiles/
+16:38:46.702 [FXGL Background Thread 2 ] DEBUG Engine               - profileName: StringProperty [value: DEFAULT]
+16:38:46.702 [FXGL Background Thread 2 ] DEBUG Engine               - randomSeed: -1
+16:38:46.702 [FXGL Background Thread 2 ] DEBUG Engine               - runtimeInfo: RuntimeInfo(platform=LINUX, version=11.9, build=27.05.2020 17.06)
+16:38:46.702 [FXGL Background Thread 2 ] DEBUG Engine               - saveFileExt: sav
+16:38:46.702 [FXGL Background Thread 2 ] DEBUG Engine               - sceneFactory: com.almasb.fxgl.app.scene.SceneFactory@3d6d63e6
+16:38:46.703 [FXGL Background Thread 2 ] DEBUG Engine               - secondsIn24h: 60
+16:38:46.703 [FXGL Background Thread 2 ] DEBUG Engine               - settings: Title: Chinmay Tiwari's Global Conquest
+Version: 0.0
+Width: 1024
+Height: 720
+Fullscreen: false
+Intro: false
+Profiling: false
+Single step:false
+App Mode: DEVELOPER
+Menu Key: ESCAPE
+Stage Style: DECORATED
+Scene Factory: class com.almasb.fxgl.app.scene.SceneFactory
+
+16:38:46.703 [FXGL Background Thread 2 ] DEBUG Engine               - soundMenuBack: menu/back.wav
+16:38:46.703 [FXGL Background Thread 2 ] DEBUG Engine               - soundMenuPress: menu/press.wav
+16:38:46.703 [FXGL Background Thread 2 ] DEBUG Engine               - soundMenuSelect: menu/select.wav
+16:38:46.703 [FXGL Background Thread 2 ] DEBUG Engine               - soundNotification: core/notification.wav
+16:38:46.703 [FXGL Background Thread 2 ] DEBUG Engine               - stageStyle: DECORATED
+16:38:46.703 [FXGL Background Thread 2 ] DEBUG Engine               - supportedLanguages: [ENGLISH, FRENCH, GERMAN, HUNGARIAN, RUSSIAN]
+16:38:46.703 [FXGL Background Thread 2 ] DEBUG Engine               - title: Chinmay Tiwari's Global Conquest
+16:38:46.703 [FXGL Background Thread 2 ] DEBUG Engine               - urlGithub: https://github.com/AlmasB/FXGL
+16:38:46.704 [FXGL Background Thread 2 ] DEBUG Engine               - urlLeaderboard: http://fxgl-top.herokuapp.com/
+16:38:46.704 [FXGL Background Thread 2 ] DEBUG Engine               - urlPOM: https://raw.githubusercontent.com/AlmasB/FXGL/master/pom.xml
+16:38:46.704 [FXGL Background Thread 2 ] DEBUG Engine               - version: 0.0
+16:38:46.704 [FXGL Background Thread 2 ] DEBUG Engine               - versionCheckDays: 7
+16:38:46.704 [FXGL Background Thread 2 ] DEBUG Engine               - width: 1024
+16:38:46.704 [FXGL Background Thread 2 ] DEBUG Engine               - Logging services
+16:38:46.704 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.app.GameApplication$GameApplicationService
+16:38:46.704 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.app.services.WindowService
+16:38:46.704 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.app.services.FXGLDialogService
+16:38:46.704 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.app.services.IOTaskExecutorService
+16:38:46.704 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.event.EventBusService
+16:38:46.705 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.io.FileSystemService
+16:38:46.705 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.localization.LocalizationService
+16:38:46.705 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.app.services.AssetLoaderService
+16:38:46.705 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.app.services.SystemBundleService
+16:38:46.705 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.profile.SaveLoadService
+16:38:46.705 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.ui.FXGLUIFactoryServiceProvider
+16:38:46.705 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.ui.FXGLDialogFactoryServiceProvider
+16:38:46.705 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.audio.AudioPlayer
+16:38:46.705 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.notification.impl.NotificationServiceProvider
+16:38:46.705 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.achievement.AchievementService
+16:38:46.705 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.cutscene.CutsceneService
+16:38:46.705 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.minigames.MiniGameService
+16:38:46.705 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.net.NetService
+16:38:46.706 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.app.services.UpdaterService
+16:38:46.706 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.dev.DevService
+16:38:46.994 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.997 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.998 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:46.999 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.000 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.001 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.002 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.003 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.004 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.005 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.006 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.007 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.007 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.008 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.009 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.011 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.012 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.013 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.014 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.015 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.015 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.017 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.018 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.019 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.020 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.020 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.021 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.022 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.023 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.024 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.025 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.026 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.027 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.028 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.029 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.030 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.031 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.031 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.032 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.033 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.034 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.035 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.036 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.037 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.038 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.039 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.040 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.041 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.042 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.043 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.043 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.044 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.045 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.046 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.047 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.048 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.049 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.050 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.051 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.052 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.052 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.054 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.055 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.056 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.056 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.057 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.058 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.059 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.060 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.061 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.062 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.063 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.064 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.065 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.066 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.067 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.068 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.069 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.070 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.070 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.071 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.072 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.073 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.074 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.075 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.076 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.077 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.078 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.079 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.080 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.080 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.081 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.082 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.083 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.084 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.085 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.086 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.087 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.087 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.088 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.089 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.090 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.091 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.092 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.093 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.093 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.094 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.095 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.096 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.097 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.098 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.100 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.101 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.102 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.103 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.104 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.105 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.106 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.107 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.108 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.109 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.110 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.111 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.112 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.113 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.114 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.115 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.116 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.117 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.118 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.120 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.121 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.122 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.123 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.124 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.125 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.126 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.127 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.128 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.129 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.130 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.131 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.132 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.134 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.135 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.136 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.137 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.138 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.139 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.140 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.141 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.142 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.143 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.144 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.145 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.146 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.147 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.148 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.149 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.150 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.151 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.152 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.152 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.153 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.154 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.155 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.156 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.157 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:47.158 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.158 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.159 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.160 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.161 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.162 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.163 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.163 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.164 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.165 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.166 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.167 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.168 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.169 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.169 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.170 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:47.171 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.172 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.173 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.174 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.174 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.176 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.176 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.177 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.178 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.179 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.180 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.181 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.182 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.183 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.184 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.185 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.186 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.187 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.188 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.189 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.190 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.191 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.192 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.193 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.193 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.194 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.195 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.196 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.197 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.198 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.199 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.200 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.201 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.202 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.203 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.204 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.204 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.205 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.206 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.207 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.208 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.209 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.210 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.210 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.211 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.213 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.214 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.215 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.216 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.217 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.218 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.219 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.220 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.221 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.222 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.222 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.223 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.224 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.225 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.226 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.226 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.227 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.228 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.229 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.230 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.231 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.231 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.234 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.235 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.236 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.236 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.238 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.238 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/units/settler.png
+16:38:47.951 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.952 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.953 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.954 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.955 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.955 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.956 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.956 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.957 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.958 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.959 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.959 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.960 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.960 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.961 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.962 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.962 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.963 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.964 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.964 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.965 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.966 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.967 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.968 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.968 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.969 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.970 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.971 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.971 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.972 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.973 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.973 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.974 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.974 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.975 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.975 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.976 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.976 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.977 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.978 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.978 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.979 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.980 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.980 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.981 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.981 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.982 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.982 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.983 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.984 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.984 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.985 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.985 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.986 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.986 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.987 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.988 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.988 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.989 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.989 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.990 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.990 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.991 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.991 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.992 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.992 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.993 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.993 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.994 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.994 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.995 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.995 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.996 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.996 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.997 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.998 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.998 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.999 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:47.999 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.000 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.001 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.001 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.002 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.002 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.003 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.003 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.004 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.004 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.005 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.005 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.006 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.006 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.055 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.055 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.056 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.057 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.058 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.059 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.060 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.060 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.061 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.062 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.062 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.063 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.063 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.064 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.065 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.065 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.066 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.066 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.067 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.067 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.068 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.068 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.069 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.069 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.070 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.070 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.071 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.071 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.072 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.072 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.073 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.073 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.074 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.075 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.075 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.076 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.077 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.078 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.079 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.079 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.080 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.081 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.081 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.082 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.083 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.084 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.084 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.085 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.086 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.086 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.087 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.088 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.088 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.089 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.090 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.090 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.091 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.091 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.092 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.092 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.093 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.094 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.094 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.095 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.095 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.096 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.096 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.096 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.097 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.097 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.098 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.098 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.099 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.099 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.100 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.100 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:48.101 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.101 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.102 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.102 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.103 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.103 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.103 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.104 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.104 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.105 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.105 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.105 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.106 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.106 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.107 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.107 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:48.108 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.108 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.108 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.109 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.109 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.110 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.110 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.111 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.111 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.111 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.112 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.112 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.113 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.113 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.114 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.114 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.115 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass_selected.png
+16:38:48.115 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.115 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.116 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.116 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.117 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.117 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.118 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.118 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.119 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.119 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.120 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.120 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.120 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.121 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.121 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.122 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.122 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.123 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.123 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.123 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.124 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.124 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.125 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.125 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.125 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.126 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.126 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.127 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.127 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.128 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.128 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.128 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.129 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.129 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.130 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.130 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.131 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.131 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.132 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.132 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.133 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.133 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.134 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.134 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.135 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.135 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.136 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.136 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.136 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.137 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.137 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.138 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.138 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.139 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.139 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/tiles/grass.png
+16:38:48.140 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/units/settler.png
+16:38:49.957 [JavaFX Application Thread] DEBUG GameApplication      - Exiting FXGL
+16:38:49.957 [JavaFX Application Thread] DEBUG LoopRunner           - Stopping loop
+16:38:49.957 [JavaFX Application Thread] DEBUG SystemBundleService  - Saving FXGL system data
+16:38:49.960 [JavaFX Application Thread] DEBUG FileSystemAccess     - Writing to: /home/segfault/fx/CTGlobalConquest/system/fxgl.bundle
+16:38:49.968 [JavaFX Application Thread] DEBUG GameApplication      - Shutting down background threads
+16:38:49.968 [JavaFX Application Thread] DEBUG GameApplication      - Closing logger and exiting JavaFX

@@ -11,9 +11,9 @@ public class Builder extends Unit {
 
   // @Override
   public void action(ObjectManager om) {
-  Farm tmp = new Farm(this.x, this.y);
-  om.structures.add(tmp);
-  this.iconPath = "";
+    Farm tmp = new Farm(this.x, this.y);
+    om.structures.add(tmp);
+    this.iconPath = "";
   }
   // public void update(){
 

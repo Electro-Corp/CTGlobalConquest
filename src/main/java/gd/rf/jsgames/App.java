@@ -49,7 +49,7 @@ public class App extends GameApplication {
     private static GameWorld gw;
     private static ObjectManager om;
     GameSettings settings = new GameSettings();
-    ui mainUI = new ui();
+    ui mainUI;
     @Override
     protected void initSettings(GameSettings settings) {
         settings.setWidth(1024);
@@ -63,6 +63,7 @@ public class App extends GameApplication {
         getGameScene().setBackgroundColor(Color.BLACK);
         om.units.add(new Settler(0, 3));
         // createBoard();
+        mainUI = new ui();
         for (int i = 0; i < TILE_COUNT_Y; i++) {
             for (int j = 0; j < TILE_COUNT_X; j++) {
                 tiles[j][i] = new Grass(j, i);
@@ -134,7 +135,7 @@ public class App extends GameApplication {
         FXGL.getInput().addAction(new UserAction("Move Left") {
             @Override
             protected void onAction() { 
-            
+                
             }
         }, KeyCode.A);
         input.addAction(LeftClick, MouseButton.PRIMARY);
