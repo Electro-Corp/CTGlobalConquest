@@ -51,6 +51,7 @@ public class App extends GameApplication {
     private static ObjectManager om;
     private SceneFactory sf = new SceneFactory();
     GameSettings settings = new GameSettings();
+    private Tile goofTileReal;
     ui mainUI;
     @Override
     protected void initSettings(GameSettings settings) {
@@ -124,6 +125,8 @@ public class App extends GameApplication {
                 int dy = (int)(input.getMouseYWorld() + MOUSE_OFFSET.y) / (TILE_SIZE + BORDER_WIDTH);
                 int dx = (int)(input.getMouseXWorld() + MOUSE_OFFSET.x) / (TILE_SIZE + BORDER_WIDTH);
                 try {
+                    goofTileReal.changeSelected();
+                    goofTileReal = tiles[(int) dx ][(int) dy ];
                     tiles[(int) dx ][(int) dy ].changeSelected();
                     if(tiles[dx][dy].unitOn != null){
                         System.out.println("There is a unit here!");
