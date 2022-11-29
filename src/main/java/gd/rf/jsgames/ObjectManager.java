@@ -13,6 +13,7 @@ public class ObjectManager {
 
     }
     public Tile[][] updateObjects(Tile[][] tiles){
+        
         for(int i = 0; i < units.size(); i++){
             units.get(i).update();
             tiles[(int) units.get(i).x][(int) units.get(i).y].unitOn = units.get(i);

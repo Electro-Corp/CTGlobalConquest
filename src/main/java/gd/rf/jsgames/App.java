@@ -2,7 +2,9 @@ package gd.rf.jsgames;
 
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.app.GameSettings;
+import com.almasb.fxgl.app.scene.SceneFactory;
 import com.almasb.fxgl.dsl.EntityBuilder;
+import com.almasb.fxgl.dsl.FXGL;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.GameWorld;
 import com.almasb.fxgl.input.Input;
@@ -47,13 +49,15 @@ public class App extends GameApplication {
     private final int BORDER_WIDTH = AppSettings.BORDER_WIDTH;
     private static GameWorld gw;
     private static ObjectManager om;
+    private SceneFactory sf = new SceneFactory();
     GameSettings settings = new GameSettings();
-    ui mainUI = new ui();
+    ui mainUI;
     @Override
     protected void initSettings(GameSettings settings) {
         settings.setWidth(1024);
         settings.setHeight(720);
         settings.setTitle("Chinmay Tiwari's Global Conquest");
+        settings.setIntroEnabled(true);
     }
 
     protected void initGame() {
@@ -62,6 +66,7 @@ public class App extends GameApplication {
         getGameScene().setBackgroundColor(Color.BLACK);
         om.units.add(new Settler(0, 3));
         // createBoard();
+        mainUI = new ui();
         for (int i = 0; i < TILE_COUNT_Y; i++) {
             for (int j = 0; j < TILE_COUNT_X; j++) {
                 tiles[j][i] = new Grass(j, i);
@@ -117,8 +122,7 @@ public class App extends GameApplication {
             protected void onActionBegin() {
                 
                 int dy = (int)(input.getMouseYWorld() + MOUSE_OFFSET.y) / (TILE_SIZE + BORDER_WIDTH);
-                int dx = (int)(input.getMouseXWorld() + MOUSE_OFFSET.x) / (TILE_SIZE
-                + BORDER_WIDTH);
+                int dx = (int)(input.getMouseXWorld() + MOUSE_OFFSET.x) / (TILE_SIZE + BORDER_WIDTH);
                 try {
                     tiles[(int) dx ][(int) dy ].changeSelected();
                     if(tiles[dx][dy].unitOn != null){
@@ -131,7 +135,12 @@ public class App extends GameApplication {
                 initUI();
             }
         };
-
+        FXGL.getInput().addAction(new UserAction("Move Left") {
+            @Override
+            protected void onAction() { 
+                
+            }
+        }, KeyCode.A);
         input.addAction(LeftClick, MouseButton.PRIMARY);
     }
 
