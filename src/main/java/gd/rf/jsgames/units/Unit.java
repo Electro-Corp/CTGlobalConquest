@@ -57,12 +57,15 @@ public class Unit {
     if (isMoving) {
       // do something
       for (int i = 0; i < moveSpeed; i++) {
-        if (toX > x)
+        if(toX == x)
+        System.out.println("bruh");
+        else if (toX > x)
           x += (toX - x) - ((toX - x) - 1);
         else
           x -= (toX - x) - ((toX - x) - 1);
-        
-          if (toY > y)
+        if(toY == y)
+        System.out.println("bruh");
+        else if (toY > y)
           y += (toY - y) - ((toY - y) - 1);
         else
           y -= (toY - y) - ((toY - y) - 1);

@@ -1,5 +1,6 @@
 package gd.rf.jsgames.ui;
 
+import gd.rf.jsgames.App;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
@@ -13,7 +14,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.TextAlignment;
 
 public class GoodButton extends Button implements EventHandler {
-    public GoodButton() {
+    public GoodButton(App ap) {
         this.setOnMouseEntered(mouseEvent -> this.setTextFill(Color.rgb(180, 180, 180)));
         this.setOnMouseExited(mouseEvent -> this.setTextFill(Color.WHITE));
 
@@ -24,8 +25,10 @@ public class GoodButton extends Button implements EventHandler {
 
     @Override
     public void handle(Event event) {
+        App.nextTurn();
     }
 
     private class GoodLabel extends Label {
+
     }
 }

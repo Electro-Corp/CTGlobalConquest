@@ -57,16 +57,24 @@ public class App extends GameApplication {
         settings.setWidth(1024);
         settings.setHeight(720);
         settings.setTitle("Chinmay Tiwari's Global Conquest");
-        settings.setIntroEnabled(true);
+        //settings.setIntroEnabled(true);
+        settings.setSceneFactory(new SceneFactory() {
+            @Override
+            public IntroS newIntro() {
+                return new IntroS();
+            }
+        });
     }
 
     protected void initGame() {
         gw = getGameWorld();
         om = new ObjectManager();
+
         getGameScene().setBackgroundColor(Color.BLACK);
         om.units.add(new Settler(0, 3));
+        om.units.get(0).moveTo(6, 5);
         // createBoard();
-        mainUI = new ui();
+        mainUI = new ui(this);
         for (int i = 0; i < TILE_COUNT_Y; i++) {
             for (int j = 0; j < TILE_COUNT_X; j++) {
                 tiles[j][i] = new Grass(j, i);
@@ -91,14 +99,17 @@ public class App extends GameApplication {
         
     }
 
-    protected void renderGame() {
+    static void renderGame() {
         
         //System.out.println("RENDER CALLED!!!");
         // System.out.println("RENDER CALLED!!!");
         for (int i = 0; i < TILE_COUNT_Y; i++) {
             for (int j = 0; j < TILE_COUNT_X; j++) {
-                tiles[j][i].toEntity();
+                gw.addEntity(tiles[j][i].toEntity());
             }
+        }
+        for (int i = 0; i < om.units.size(); i++) {
+            gw.addEntity(om.units.get(i).toEntity());
         }
     }
 
@@ -111,8 +122,9 @@ public class App extends GameApplication {
     // private Entity createGrass(int x, int y) {
     // return new Grass(x, y);
     // }
-    private static void nextTurn(){
+    public static void nextTurn(){
         om.updateObjects(tiles);
+        renderGame();
     }
     protected void initInput() {
         Input input = getInput();
@@ -146,7 +158,7 @@ public class App extends GameApplication {
 
 
     public static void update() {
-        nextTurn();
+        //nextTurn();
     }
     public static void main(String[] args) {
         launch(args);
