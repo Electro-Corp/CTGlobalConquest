@@ -84,6 +84,8 @@ public class App extends GameApplication {
     
         getGameScene().addUINode(mainUI);
         nextTurn();
+
+        goofTileReal = new Tile(-BOARD_X, -BOARD_Y);
         settings.setAppIcon("icon.png");
     }
 
