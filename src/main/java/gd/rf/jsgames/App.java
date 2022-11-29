@@ -8,6 +8,8 @@ import com.almasb.fxgl.dsl.FXGL;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.GameWorld;
 import com.almasb.fxgl.input.Input;
+import com.almasb.fxgl.input.InputModifier;
+import com.almasb.fxgl.input.InputSequence;
 import com.almasb.fxgl.input.UserAction;
 
 import gd.rf.jsgames.datatypes.Point;
@@ -33,6 +35,7 @@ import java.io.FileNotFoundException;
 import java.util.*;
 
 import java.util.Map;
+
 //https://github.com/AlmasB/FXGL/issues/526
 public class App extends GameApplication {
     private static final int TILE_SIZE = AppSettings.TILE_SIZE;
@@ -51,14 +54,16 @@ public class App extends GameApplication {
     private static ObjectManager om;
     private SceneFactory sf = new SceneFactory();
     GameSettings settings = new GameSettings();
-    private Tile goofTileReal;
+    private Tile cTile;
+    private ArrayList<Tile> sTiles;
     ui mainUI;
+
     @Override
     protected void initSettings(GameSettings settings) {
         settings.setWidth(1024);
         settings.setHeight(720);
         settings.setTitle("Chinmay Tiwari's Global Conquest");
-        //settings.setIntroEnabled(true);
+        // settings.setIntroEnabled(true);
         settings.setSceneFactory(new SceneFactory() {
             @Override
             public IntroS newIntro() {
@@ -81,16 +86,17 @@ public class App extends GameApplication {
                 tiles[j][i] = new Grass(j, i);
             }
         }
-    
+
         getGameScene().addUINode(mainUI);
         nextTurn();
 
-        goofTileReal = new Tile(-BOARD_X, -BOARD_Y);
+        cTile = new Tile();
+        sTiles = new ArrayList<>();
         settings.setAppIcon("icon.png");
     }
 
     protected void initUI() {
-        
+
         for (int i = 0; i < TILE_COUNT_Y; i++) {
             for (int j = 0; j < TILE_COUNT_X; j++) {
                 gw.addEntity(tiles[j][i].toEntity());
@@ -99,12 +105,12 @@ public class App extends GameApplication {
         for (int i = 0; i < om.units.size(); i++) {
             gw.addEntity(om.units.get(i).toEntity());
         }
-        
+
     }
 
     static void renderGame() {
-        
-        //System.out.println("RENDER CALLED!!!");
+
+        // System.out.println("RENDER CALLED!!!");
         // System.out.println("RENDER CALLED!!!");
         for (int i = 0; i < TILE_COUNT_Y; i++) {
             for (int j = 0; j < TILE_COUNT_X; j++) {
@@ -122,51 +128,93 @@ public class App extends GameApplication {
                 .view(new Rectangle(BOARD_SIZE, BOARD_SIZE, Color.LIGHTGRAY))
                 .buildAndAttach();
     }
+
     // private Entity createGrass(int x, int y) {
     // return new Grass(x, y);
     // }
-    public static void nextTurn(){
+    public static void nextTurn() {
         om.updateObjects(tiles);
         renderGame();
     }
+
     protected void initInput() {
         Input input = getInput();
-
-        UserAction LeftClick = new UserAction("LeftClick") {
+        UserAction leftClick = new UserAction("LeftClick") {
             @Override
             protected void onActionBegin() {
-                
-                int dy = (int)(input.getMouseYWorld() + MOUSE_OFFSET.y) / (TILE_SIZE + BORDER_WIDTH);
-                int dx = (int)(input.getMouseXWorld() + MOUSE_OFFSET.x) / (TILE_SIZE + BORDER_WIDTH);
+                sTiles.clear();
+                int dy = (int) (input.getMouseYWorld() + MOUSE_OFFSET.y) / (TILE_SIZE + BORDER_WIDTH);
+                int dx = (int) (input.getMouseXWorld() + MOUSE_OFFSET.x) / (TILE_SIZE + BORDER_WIDTH);
                 try {
-                    goofTileReal.changeSelected();
-                    goofTileReal = tiles[(int) dx ][(int) dy ];
-                    tiles[(int) dx ][(int) dy ].changeSelected();
-                    if(tiles[dx][dy].unitOn != null){
+                    cTile.changeSelected();
+                    cTile = tiles[(int) dx][(int) dy];
+                    tiles[(int) dx][(int) dy].changeSelected();
+                    if (tiles[dx][dy].unitOn != null) {
                         System.out.println("There is a unit here!");
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                
+
                 initUI();
             }
         };
-        FXGL.getInput().addAction(new UserAction("Move Left") {
+        // TODO: Implement
+        // FUNCITON: From Current pos -> Clicked Tile
+        UserAction shiftLeftClick = new UserAction("ShiftLeftClick") {
             @Override
-            protected void onAction() { 
-                
+            protected void onActionBegin() {
+
+                int dy = (int) `(input.getMouseYWorld() + MOUSE_OFFSET.y) / (TILE_SIZE + BORDER_WIDTH);
+                int dx = (int) (input.getMouseXWorld() + MOUSE_OFFSET.x) / (TILE_SIZE + BORDER_WIDTH);
+                try {
+                    cTile = tiles[(int) dx][(int) dy];
+                    tiles[(int) dx][(int) dy].changeSelected();
+                    if (tiles[dx][dy].unitOn != null) {
+                        System.out.println("There is a unit here!");
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+                initUI();
             }
-        }, KeyCode.A);
-        input.addAction(LeftClick, MouseButton.PRIMARY);
+        };
+        // Adds clicked tile
+        UserAction ctrlLeftClick = new UserAction("ctrlLeftClick") {
+            @Override
+            protected void onActionBegin() {
+
+                int dy = (int) (input.getMouseYWorld() + MOUSE_OFFSET.y) / (TILE_SIZE + BORDER_WIDTH);
+                int dx = (int) (input.getMouseXWorld() + MOUSE_OFFSET.x) / (TILE_SIZE + BORDER_WIDTH);
+                try {
+                    cTile = tiles[(int) dx][(int) dy];
+                    sTiles.add(cTile);
+                    tiles[(int) dx][(int) dy].changeSelected();
+                    if (tiles[dx][dy].unitOn != null) {
+                        System.out.println("There is a unit here!");
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+                initUI();
+            }
+        };
+
+        input.addAction(leftClick, MouseButton.PRIMARY);
+        input.addAction(shiftLeftClick, MouseButton.PRIMARY, InputModifier.SHIFT);
+        input.addAction(ctrlLeftClick, MouseButton.PRIMARY, InputModifier.CTRL);
     }
 
-
+    // TODO: Implement a change tile states method to change all selected tiles so
+    // that they are selected
     public static void update() {
-        //nextTurn();
+        // nextTurn();
     }
+
     public static void main(String[] args) {
         launch(args);
-        
+
     }
 }

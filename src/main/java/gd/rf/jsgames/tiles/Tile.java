@@ -39,10 +39,15 @@ public class Tile {
     public Node node = FXGL.getAssetLoader().loadTexture(path);
     public boolean selected = false;
     public Unit unitOn = null;
+
     public Tile(double x, double y) {
-        this.size = 30;
+        this.size = AppSettings.TILE_SIZE;
         this.x = x;
         this.y = y;
+    }
+
+    public Tile() {
+        this(-1, -1);
     }
 
     public String img() {
