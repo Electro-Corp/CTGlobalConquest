@@ -165,7 +165,7 @@ public class App extends GameApplication {
             @Override
             protected void onActionBegin() {
 
-                int dy = (int) `(input.getMouseYWorld() + MOUSE_OFFSET.y) / (TILE_SIZE + BORDER_WIDTH);
+                int dy = (int) (input.getMouseYWorld() + MOUSE_OFFSET.y) / (TILE_SIZE + BORDER_WIDTH);
                 int dx = (int) (input.getMouseXWorld() + MOUSE_OFFSET.x) / (TILE_SIZE + BORDER_WIDTH);
                 try {
                     cTile = tiles[(int) dx][(int) dy];
