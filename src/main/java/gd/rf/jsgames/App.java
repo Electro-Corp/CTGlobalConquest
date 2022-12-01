@@ -12,6 +12,7 @@ import com.almasb.fxgl.input.InputModifier;
 import com.almasb.fxgl.input.InputSequence;
 import com.almasb.fxgl.input.UserAction;
 
+import gd.rf.jsgames.civics.civics;
 import gd.rf.jsgames.datatypes.Point;
 import gd.rf.jsgames.tiles.Grass;
 import gd.rf.jsgames.tiles.Tile;
@@ -57,7 +58,7 @@ public class App extends GameApplication {
     private Tile cTile;
     private ArrayList<Tile> sTiles;
     ui mainUI;
-    private static Entity[][] tileEntities;
+
     @Override
     protected void initSettings(GameSettings settings) {
         settings.setWidth(1024);
@@ -75,10 +76,7 @@ public class App extends GameApplication {
     protected void initGame() {
         gw = getGameWorld();
         om = new ObjectManager();
-        tileEntities = new Entity[BOARD_X][BOARD_Y];
-        cTile = new Tile();
-        sTiles = new ArrayList<>();
-        settings.setAppIcon("icon.png");
+
         getGameScene().setBackgroundColor(Color.BLACK);
         om.units.add(new Settler(0, 3));
         om.units.get(0).moveTo(6, 5);
@@ -151,8 +149,7 @@ public class App extends GameApplication {
             @Override
             protected void onActionBegin() {
                 clearSTiles();
-                System.out.println(tiles);
-                //sTiles.clear();
+                sTiles.clear();
                 int dy = (int) (input.getMouseYWorld() + MOUSE_OFFSET.y) / (TILE_SIZE + BORDER_WIDTH);
                 
                 int dx = (int) (input.getMouseXWorld() + MOUSE_OFFSET.x) / (TILE_SIZE + BORDER_WIDTH);
@@ -238,8 +235,11 @@ public class App extends GameApplication {
                 System.out.println(sTiles.get(i));
             // }
             tiles[x][y] = sTiles.get(i);
+            System.out.println(tiles[x][y]);
         }
         sTiles.clear();
+        // System.out.println(sTiles.size());
+        // updateTiles();
     }
 
     public static void main(String[] args) {
