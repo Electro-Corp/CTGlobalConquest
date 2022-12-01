@@ -2,9 +2,9 @@ package gd.rf.jsgames.operations;
 
 import gd.rf.jsgames.App;
 
-public class NextTurn extends Action{
+public class NextTurn extends Action {
     @Override
     public void doAction() {
-        App.update();
+        App.nextTurn();
     }
 }

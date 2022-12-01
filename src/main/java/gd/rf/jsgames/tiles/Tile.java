@@ -58,7 +58,7 @@ public class Tile {
         path = _p;
     }
 
-    public void changeSelected() throws FileNotFoundException {
+    public void changeSelected() {
         if (selected) {
             selected = false;
             path = unSelectedPath;
@@ -75,5 +75,10 @@ public class Tile {
                         (AppSettings.TILE_SIZE + AppSettings.BORDER_WIDTH) * y)
                 .view(node)
                 .build();
+    }
+
+    public String toString() {
+        return ("State = {'location'=(" + x + "," + y + "), " + "'selected'=" + selected + ", 'troopOn'=" + unitOn
+                + "} " + "current path=" + path);
     }
 }

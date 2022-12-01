@@ -142,21 +142,23 @@ public class App extends GameApplication {
         UserAction leftClick = new UserAction("LeftClick") {
             @Override
             protected void onActionBegin() {
+                clearSTiles();
                 sTiles.clear();
                 int dy = (int) (input.getMouseYWorld() + MOUSE_OFFSET.y) / (TILE_SIZE + BORDER_WIDTH);
                 int dx = (int) (input.getMouseXWorld() + MOUSE_OFFSET.x) / (TILE_SIZE + BORDER_WIDTH);
                 try {
                     cTile.changeSelected();
                     cTile = tiles[(int) dx][(int) dy];
+                    sTiles.add(cTile);
                     tiles[(int) dx][(int) dy].changeSelected();
-                    if (tiles[dx][dy].unitOn != null) {
-                        System.out.println("There is a unit here!");
-                    }
+                    // if (tiles[dx][dy].unitOn != null) {
+                    // System.out.println("There is a unit here!");
+                    // }
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
 
-                initUI();
+                updateTiles();
             }
         };
         // TODO: Implement
@@ -168,16 +170,12 @@ public class App extends GameApplication {
                 int dy = (int) (input.getMouseYWorld() + MOUSE_OFFSET.y) / (TILE_SIZE + BORDER_WIDTH);
                 int dx = (int) (input.getMouseXWorld() + MOUSE_OFFSET.x) / (TILE_SIZE + BORDER_WIDTH);
                 try {
-                    cTile = tiles[(int) dx][(int) dy];
-                    tiles[(int) dx][(int) dy].changeSelected();
-                    if (tiles[dx][dy].unitOn != null) {
-                        System.out.println("There is a unit here!");
-                    }
+                    // NOTHING HERE
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
 
-                initUI();
+                updateTiles();
             }
         };
         // Adds clicked tile
@@ -197,8 +195,7 @@ public class App extends GameApplication {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-
-                initUI();
+                updateTiles();
             }
         };
 
@@ -209,12 +206,36 @@ public class App extends GameApplication {
 
     // TODO: Implement a change tile states method to change all selected tiles so
     // that they are selected
-    public static void update() {
-        // nextTurn();
+    public void updateTiles() {
+        for (int index = 0; index < sTiles.size(); index++) {
+            int x = (int) sTiles.get(index).x;
+            int y = (int) sTiles.get(index).y;
+            if (!sTiles.get(index).selected)
+                sTiles.get(index).changeSelected();
+            // System.out.println(sTiles.get(index));
+            tiles[x][y] = sTiles.get(index);
+        }
+        renderGame();
+    }
+
+    public void clearSTiles() {
+        // System.out.println(sTiles.size());
+        for (int i = 0; i < sTiles.size(); i++) {
+            // System.out.println(sTiles.get(i));
+            int x = (int) sTiles.get(i).x;
+            int y = (int) sTiles.get(i).y;
+            if (sTiles.get(i).selected) {
+                sTiles.get(i).changeSelected();
+                System.out.println(sTiles.get(i));
+            }
+            tiles[x][y] = sTiles.get(i);
+        }
+        sTiles.clear();
+        // System.out.println(sTiles.size());
+        // updateTiles();
     }
 
     public static void main(String[] args) {
         launch(args);
-
     }
 }
