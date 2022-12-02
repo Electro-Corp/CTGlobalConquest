@@ -45,8 +45,6 @@ public class App extends GameApplication {
     private ArrayList<Tile> sTiles;
     ui mainUI;
 
-    private static Entity[][] tileEntities;
-
     @Override
     protected void initSettings(GameSettings settings) {
         settings.setWidth(1024);
@@ -64,12 +62,10 @@ public class App extends GameApplication {
     protected void initGame() {
         gw = getGameWorld();
         om = new ObjectManager();
-        tileEntities = new Entity[BOARD_X][BOARD_Y];
         getGameScene().setBackgroundColor(Color.BLACK);
         om.units.add(new Settler(0, 3));
         om.units.get(0).moveTo(6, 5);
         // createBoard();
-
         mainUI = new ui(this);
         for (int i = 0; i < TILE_COUNT_Y; i++) {
             for (int j = 0; j < TILE_COUNT_X; j++) {
@@ -78,38 +74,33 @@ public class App extends GameApplication {
         }
 
         getGameScene().addUINode(mainUI);
-        initUI();
+        nextTurn();
+
+        cTile = new Tile();
+        sTiles = new ArrayList<>();
+        settings.setAppIcon("icon.png");
     }
 
     protected void initUI() {
-        // gw.removeEntities(gw.getEntities());
 
         for (int i = 0; i < TILE_COUNT_Y; i++) {
             for (int j = 0; j < TILE_COUNT_X; j++) {
-                tileEntities[j][i] = tiles[j][i].toEntity();
+                gw.addEntity(tiles[j][i].toEntity());
             }
         }
         for (int i = 0; i < om.units.size(); i++) {
             gw.addEntity(om.units.get(i).toEntity());
         }
-        renderGame();
+
     }
 
     static void renderGame() {
+
         // System.out.println("RENDER CALLED!!!");
         // System.out.println("RENDER CALLED!!!");
         for (int i = 0; i < TILE_COUNT_Y; i++) {
             for (int j = 0; j < TILE_COUNT_X; j++) {
-                double x = tiles[j][i].x;
-                double y = tiles[j][i].y;
-                String path = tiles[j][i].path;
-                Node node = FXGL.getAssetLoader().loadTexture(path);
-                tileEntities[j][i].setPosition(x, y);
-                // tileEntities[j][i].getViewComponent().clearChildren();
-                // tileEntities[j][i].getViewComponent().addChild(node);
-
-                // gw.addEntity(tileEntities[j][i]);
-                // System.out.println(tiles[j][i]);
+                gw.addEntity(tiles[j][i].toEntity());
             }
         }
         for (int i = 0; i < om.units.size(); i++) {
@@ -140,7 +131,6 @@ public class App extends GameApplication {
                 clearSTiles();
                 sTiles.clear();
                 int dy = (int) (input.getMouseYWorld() + MOUSE_OFFSET.y) / (TILE_SIZE + BORDER_WIDTH);
-
                 int dx = (int) (input.getMouseXWorld() + MOUSE_OFFSET.x) / (TILE_SIZE + BORDER_WIDTH);
                 try {
                     cTile.changeSelected();
@@ -155,7 +145,6 @@ public class App extends GameApplication {
                 }
 
                 updateTiles();
-                initUI();
             }
         };
         // TODO: Implement
@@ -216,13 +205,15 @@ public class App extends GameApplication {
     }
 
     public void clearSTiles() {
+        // System.out.println(sTiles.size());
         for (int i = 0; i < sTiles.size(); i++) {
+            // System.out.println(sTiles.get(i));
             int x = (int) sTiles.get(i).x;
             int y = (int) sTiles.get(i).y;
-            // if (sTiles.get(i).selected) {
-            sTiles.get(i).changeSelected();
-            System.out.println(sTiles.get(i));
-            // }
+            if (sTiles.get(i).selected) {
+                sTiles.get(i).changeSelected();
+                System.out.println(sTiles.get(i));
+            }
             tiles[x][y] = sTiles.get(i);
             System.out.println(tiles[x][y]);
         }
