@@ -6,3 +6,6 @@
 
 ## Gameplay
 Think Civilization + Age of Empires
+
+## Very Important
+Optimize and condense so I dont have to deal with it. I need it to become readable.
